@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Mundo BNB - Registro Paso 2</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0b203c",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#121820",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Manrope', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark min-h-screen text-slate-900 dark:text-slate-100">
+<div class="relative flex min-h-screen flex-col overflow-x-hidden">
+<!-- Navigation Bar -->
+<header class="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-6 md:px-20 py-4 sticky top-0 z-50">
+<div class="flex items-center"><img alt="Mundo BNB Logo" class="h-10 md:h-12 w-auto object-contain" src="{{DATA:IMAGE:IMAGE_13}}"/></div>
+<div class="flex items-center gap-4">
+<button class="flex items-center justify-center rounded-full h-10 w-10 bg-slate-100 dark:bg-slate-800 text-primary dark:text-slate-300 hover:bg-slate-200 transition-colors">
+<span class="material-symbols-outlined">person</span>
+</button>
+</div>
+</header>
+<main class="flex-1 flex flex-col items-center justify-start py-12 px-4 md:px-0">
+<div class="w-full max-w-[540px] flex flex-col gap-8">
+<!-- Progress Section -->
+<div class="flex flex-col gap-3 w-full">
+<div class="flex justify-between items-end">
+<div>
+<span class="text-primary font-bold text-sm uppercase tracking-wider">Paso 2 de 4</span>
+<h1 class="text-3xl font-extrabold text-slate-900 dark:text-white mt-1">Información Básica</h1>
+</div>
+<span class="text-slate-500 font-semibold text-sm">25% completado</span>
+</div>
+<div class="h-2 w-full bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full transition-all duration-500" style="width: 25%;"></div>
+</div>
+<p class="text-slate-500 text-sm">Cuéntanos un poco sobre ti para comenzar tu experiencia premium.</p>
+</div>
+<!-- Form Card -->
+<div class="bg-white dark:bg-slate-900 rounded-xl shadow-xl shadow-slate-200/50 dark:shadow-none border border-slate-100 dark:border-slate-800 p-8 md:p-10">
+<form action="#" class="flex flex-col gap-6">
+<!-- Input: Name -->
+<div class="flex flex-col gap-2">
+<label class="text-sm font-bold text-slate-700 dark:text-slate-300 flex items-center gap-2" for="full-name">
+<span class="material-symbols-outlined text-sm">badge</span>
+                                Nombre completo
+                            </label>
+<input class="w-full rounded-lg border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white focus:border-primary focus:ring-2 focus:ring-primary/20 h-14 px-4 transition-all outline-none" id="full-name" placeholder="Ej. Juan Pérez" type="text"/>
+</div>
+<!-- Input: Email -->
+<div class="flex flex-col gap-2">
+<label class="text-sm font-bold text-slate-700 dark:text-slate-300 flex items-center gap-2" for="email">
+<span class="material-symbols-outlined text-sm">mail</span>
+                                Email corporativo o personal
+                            </label>
+<input class="w-full rounded-lg border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white focus:border-primary focus:ring-2 focus:ring-primary/20 h-14 px-4 transition-all outline-none" id="email" placeholder="correo@ejemplo.com" type="email"/>
+</div>
+<!-- Input: City/Country -->
+<div class="flex flex-col gap-2">
+<label class="text-sm font-bold text-slate-700 dark:text-slate-300 flex items-center gap-2" for="location">
+<span class="material-symbols-outlined text-sm">location_on</span>
+                                Ciudad / País
+                            </label>
+<div class="relative">
+<input class="w-full rounded-lg border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white focus:border-primary focus:ring-2 focus:ring-primary/20 h-14 px-4 transition-all outline-none" id="location" placeholder="Ej. Madrid, España" type="text"/>
+</div>
+</div>
+<!-- Decorative Divider -->
+<div class="py-4">
+<hr class="border-slate-100 dark:border-slate-800"/>
+</div>
+<!-- Action Buttons -->
+<div class="flex flex-col md:flex-row gap-4 items-center justify-between">
+<button class="w-full md:w-auto px-6 py-3 text-sm font-bold text-slate-500 hover:text-primary transition-colors flex items-center justify-center gap-2" type="button">
+<span class="material-symbols-outlined text-lg">arrow_back</span>
+                                Volver
+                            </button>
+<button class="w-full md:flex-1 bg-primary text-white rounded-lg h-14 text-base font-bold flex items-center justify-center gap-2 hover:bg-primary/90 transition-all shadow-lg shadow-primary/20" type="submit">
+                                Siguiente paso
+                                <span class="material-symbols-outlined text-xl">arrow_forward</span>
+</button>
+</div>
+</form>
+</div>
+<!-- Footer Support -->
+<div class="flex flex-col items-center gap-4 text-center">
+<p class="text-slate-400 text-xs">
+                        Al continuar, aceptas nuestros <a class="underline hover:text-primary" href="#">Términos de Servicio</a> y <a class="underline hover:text-primary" href="#">Política de Privacidad</a>.
+                    </p>
+<div class="flex gap-4">
+<img class="h-6 opacity-30 grayscale hover:grayscale-0 transition-all cursor-pointer" data-alt="Abstract subtle dark patterns logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPULzR5wC7c5Xf-8NFvUDRDfkotRRnZoksxsZdGJAfwj6vxn72ihxjyHlN7gIIE3EWO5TIRHzyFbrqvOIWAyydIUoHgaxkrFwglLO2k25sekT5gVz-ttw29r_v0-1tk56zpUg7RNsFbT9_fN8Kafb-JsY8SIVbANejVOkV9KF2pPXSBrr48FhKdvegOUnd_-wzrvcuhl92wl0sv3FnT5_0SdvUIFBjJeXo5F0s2Vr4bPkE99ZJeYYY0j59iBzpGU1nITDZ4_zb4UGj"/>
+<img class="h-6 opacity-30 grayscale hover:grayscale-0 transition-all cursor-pointer" data-alt="Abstract sleek geometric shapes logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgNIQ67B1QZD_vviJnifqxG0HeusAaMTdvCkbnPMSZ1LF9G-FP1vv1NzKykDVnJDZqkGnE9-0bswRUEHAHEqPVO0Q65FNMtZ2oRm06uT4-g4yw9xLA7iTjUPq4pPV3dhP-9UXJZuuKYVE_-_CH9F-fM2-6q06bGbVslsJusqfZvA2DIhIVFodzfJQ-SO1TS9xtIpwVrTXF60waILDNDTMxlWipJZ4APIebAXCsbcm42cQirjayqeWk06LZjQnN7DAHrX3_8rEvI_T0"/>
+</div>
+</div>
+</div>
+</main>
+<!-- Decorative Background Element -->
+<div class="fixed top-0 right-0 -z-10 w-1/3 h-screen bg-gradient-to-l from-primary/5 to-transparent pointer-events-none"></div>
+<div class="fixed bottom-0 left-0 -z-10 w-1/4 h-64 bg-gradient-to-tr from-primary/5 to-transparent pointer-events-none rounded-tr-full"></div>
+</div>
+</body></html>

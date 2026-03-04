@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contacto | Mundo BNB</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0b203c",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#121820",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Manrope', sans-serif;
+        }
+        .active-nav {
+            border-bottom: 2px solid #0b203c;
+            color: #0b203c;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display">
+<div class="relative flex min-h-screen w-full flex-col">
+<!-- Top Navigation Bar -->
+<header class="sticky top-0 z-50 w-full border-b border-slate-200 bg-white/80 backdrop-blur-md dark:border-slate-800 dark:bg-background-dark/80 px-6 md:px-20 lg:px-40 py-4">
+<div class="mx-auto flex max-w-[1280px] items-center justify-between">
+<div class="flex items-center gap-3">
+<img alt="Mundo BNB Logo" class="h-12 w-auto object-contain h-10 md:h-12 w-auto" data-alt="Official Mundo BNB company logo" src="{{DATA:IMAGE:IMAGE_7}}"/>
+</div>
+<nav class="hidden md:flex items-center gap-10">
+<a class="text-sm font-medium text-slate-600 hover:text-primary transition-colors" href="#">Inicio</a>
+<a class="text-sm font-medium text-slate-600 hover:text-primary transition-colors" href="#">Servicios</a>
+<a class="text-sm font-medium text-slate-600 hover:text-primary transition-colors" href="#">Sobre Nosotros</a>
+<a class="text-sm active-nav py-1" href="#">Contacto</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="hidden lg:flex items-center justify-center rounded-lg bg-primary px-5 py-2.5 text-sm font-bold text-white transition-all hover:opacity-90 active:scale-95 shadow-lg shadow-primary/20">
+                        Agendar Consultoría
+                    </button>
+<span class="material-symbols-outlined cursor-pointer text-slate-600 md:hidden">menu</span>
+</div>
+</div>
+</header>
+<main class="flex-1">
+<!-- Hero Section -->
+<section class="px-6 md:px-20 lg:px-40 py-16 md:py-24">
+<div class="mx-auto max-w-[1280px]">
+<div class="max-w-3xl">
+<h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-primary dark:text-slate-100 leading-[1.1] tracking-tight mb-6">
+                            Hablemos de tu próximo paso en el sector de rentas cortas.
+                        </h1>
+<p class="text-lg md:text-xl text-slate-600 dark:text-slate-400 leading-relaxed">
+                            Estamos aquí para ayudarte a profesionalizar tu gestión y maximizar tus ingresos en el mundo de Airbnb. Envíanos un mensaje y te responderemos en menos de 24 horas.
+                        </p>
+</div>
+</div>
+</section>
+<!-- Contact Content Grid -->
+<section class="px-6 md:px-20 lg:px-40 pb-24">
+<div class="mx-auto grid max-w-[1280px] grid-cols-1 gap-16 lg:grid-cols-2">
+<!-- Left Column: Direct Access -->
+<div class="flex flex-col gap-8">
+<div class="rounded-xl border border-slate-200 bg-white p-8 shadow-sm transition-shadow hover:shadow-md dark:border-slate-800 dark:bg-slate-900/50">
+<div class="mb-6 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<h3 class="mb-2 text-xl font-bold text-primary dark:text-slate-100">Escríbenos directamente</h3>
+<p class="mb-6 text-slate-600 dark:text-slate-400">¿Prefieres el correo tradicional? Nuestro equipo de soporte está listo para leerte.</p>
+<a class="text-lg font-bold text-primary underline decoration-primary/30 underline-offset-4 hover:decoration-primary" href="mailto:hola@mundobnb.com">
+                                hola@mundobnb.com
+                            </a>
+</div>
+<div class="rounded-xl border border-primary/10 bg-primary p-8 text-white shadow-xl shadow-primary/20">
+<div class="mb-6 flex h-12 w-12 items-center justify-center rounded-lg bg-white/20 text-white">
+<span class="material-symbols-outlined">event_available</span>
+</div>
+<h3 class="mb-2 text-xl font-bold">Asesoría Estratégica</h3>
+<p class="mb-8 text-slate-200">Si buscas resultados inmediatos, agenda una sesión de consultoría personalizada con nuestros expertos.</p>
+<button class="flex w-full items-center justify-center gap-2 rounded-lg bg-white py-4 text-sm font-extrabold text-primary transition-transform hover:scale-[1.02] active:scale-100">
+<span>Agendar Consultoría</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+<div class="flex items-center gap-6 px-2">
+<a class="text-slate-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">share</span></a>
+<div class="h-1 w-1 rounded-full bg-slate-300"></div>
+<p class="text-sm font-medium text-slate-500 uppercase tracking-widest">Síguenos en redes sociales</p>
+</div>
+</div>
+<!-- Right Column: Contact Form -->
+<div class="rounded-2xl border border-slate-200 bg-white p-8 shadow-2xl shadow-slate-200/50 dark:border-slate-800 dark:bg-slate-900 dark:shadow-none md:p-12">
+<h2 class="mb-8 text-2xl font-bold text-primary dark:text-slate-100">Envíanos un mensaje</h2>
+<form action="#" class="space-y-6">
+<div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+<div class="space-y-2">
+<label class="text-sm font-bold text-slate-700 dark:text-slate-300">Nombre completo</label>
+<input class="w-full rounded-lg border-slate-200 bg-slate-50 p-4 text-slate-900 outline-none transition-all focus:border-primary focus:ring-2 focus:ring-primary/10 dark:border-slate-700 dark:bg-slate-800 dark:text-white" placeholder="Ej. Juan Pérez" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-sm font-bold text-slate-700 dark:text-slate-300">Correo electrónico</label>
+<input class="w-full rounded-lg border-slate-200 bg-slate-50 p-4 text-slate-900 outline-none transition-all focus:border-primary focus:ring-2 focus:ring-primary/10 dark:border-slate-700 dark:bg-slate-800 dark:text-white" placeholder="juan@ejemplo.com" type="email"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-sm font-bold text-slate-700 dark:text-slate-300">Asunto</label>
+<select class="w-full rounded-lg border-slate-200 bg-slate-50 p-4 text-slate-900 outline-none transition-all focus:border-primary focus:ring-2 focus:ring-primary/10 dark:border-slate-700 dark:bg-slate-800 dark:text-white">
+<option>Gestión de Propiedades</option>
+<option>Optimización de Perfil</option>
+<option>Inversiones</option>
+<option>Otros</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="text-sm font-bold text-slate-700 dark:text-slate-300">Mensaje</label>
+<textarea class="w-full rounded-lg border-slate-200 bg-slate-50 p-4 text-slate-900 outline-none transition-all focus:border-primary focus:ring-2 focus:ring-primary/10 dark:border-slate-700 dark:bg-slate-800 dark:text-white resize-none" placeholder="Cuéntanos sobre tu propiedad o proyecto..." rows="5"></textarea>
+</div>
+<button class="w-full rounded-lg bg-primary py-4 text-base font-bold text-white transition-all hover:bg-primary/90 hover:shadow-lg active:scale-95" type="submit">
+                                Enviar Mensaje
+                            </button>
+<p class="text-center text-xs text-slate-500">
+                                Al enviar este formulario, aceptas nuestra política de privacidad y tratamiento de datos.
+                            </p>
+</form>
+</div>
+</div>
+</section>
+<!-- Map Placeholder / Image -->
+</main>
+<!-- Minimalist Footer -->
+<footer class="bg-white dark:bg-background-dark border-t border-slate-200 dark:border-slate-800 px-6 md:px-20 lg:px-40 py-12">
+<div class="mx-auto max-w-[1280px] flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex items-center gap-3">
+<img alt="Mundo BNB Logo" class="h-10 w-auto object-contain h-8 md:h-10 w-auto" data-alt="Official Mundo BNB company logo" src="{{DATA:IMAGE:IMAGE_7}}"/>
+</div>
+<div class="flex gap-8 text-sm text-slate-500">
+<a class="hover:text-primary" href="#">Privacidad</a>
+<a class="hover:text-primary" href="#">Términos</a>
+<a class="hover:text-primary" href="#">Cookies</a>
+</div>
+<p class="text-sm text-slate-400">© 2024 Mundo BNB. Todos los derechos reservados.</p>
+</div>
+</footer>
+</div>
+</body></html>

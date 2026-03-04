@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Mundo BNB - Optimización de Alquiler Vacacional</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0b203c",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#121820",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Manrope', sans-serif;
+        }
+        .sticky-nav {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            backdrop-filter: blur(8px);
+            background-color: rgba(255, 255, 255, 0.9);
+            border-bottom: 1px solid rgba(11, 32, 60, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display transition-colors duration-300">
+<!-- Sticky Navbar -->
+<nav class="sticky-nav px-6 lg:px-20 py-4 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<img alt="Mundo BNB Logo" class="h-14 w-auto object-contain" data-alt="Official logo for Mundo BNB" src="{{DATA:IMAGE:IMAGE_21}}"/>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-primary font-bold border-b-2 border-primary pb-1" href="#">Inicio</a>
+<a class="text-slate-600 hover:text-primary transition-colors font-medium" href="#">Servicios</a>
+<a class="text-slate-600 hover:text-primary transition-colors font-medium" href="#">Casos de Éxito</a>
+<a class="text-slate-600 hover:text-primary transition-colors font-medium" href="#">Sobre Nosotros</a>
+</div>
+<div class="flex items-center gap-4">
+<a class="hidden sm:block text-primary font-bold text-sm px-4" href="#">Login</a>
+<button class="bg-primary text-white px-6 py-2.5 rounded-lg font-bold text-sm hover:bg-primary/90 transition-all shadow-lg shadow-primary/20">
+                Inicia tu Aplicación
+            </button>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative overflow-hidden pt-16 pb-24 px-6 lg:px-20">
+<div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16">
+<div class="flex-1 text-left">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/5 text-primary text-xs font-bold uppercase tracking-widest mb-6">
+<span class="material-symbols-outlined text-sm">verified</span>
+                    Gestión Premium de Propiedades
+                </div>
+<h1 class="text-5xl lg:text-7xl font-extrabold text-primary leading-[1.1] tracking-tight mb-8">
+                    Optimiza tu <span class="text-blue-600">Rentabilidad</span> en Alquiler Vacacional
+                </h1>
+<p class="text-lg lg:text-xl text-slate-600 mb-10 leading-relaxed max-w-2xl">
+                    Maximiza tus ingresos con nuestra gestión experta de propiedades a corto plazo. Soluciones SaaS de alta fidelidad diseñadas para anfitriones que buscan excelencia y resultados medibles.
+                </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-primary text-white px-8 py-4 rounded-lg font-bold text-lg hover:translate-y-[-2px] transition-all shadow-xl shadow-primary/20">
+                        Inicia tu Aplicación
+                    </button>
+<button class="border-2 border-slate-200 text-primary px-8 py-4 rounded-lg font-bold text-lg hover:bg-slate-50 transition-all">
+                        Saber Más
+                    </button>
+</div>
+</div>
+<div class="flex-1 w-full">
+<div class="relative">
+<div class="absolute -top-10 -right-10 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
+<div class="bg-white p-2 rounded-2xl shadow-2xl border border-slate-100 relative z-10 overflow-hidden">
+<img alt="Luxury Short-Term Rental" class="rounded-xl w-full h-[500px] object-cover" data-alt="Bright and beautiful luxury short-term rental interior" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdigyNTUnBWQgFAUpEBD8R2vjsBOIUFBsyR_w26Jmy9-b2UH9heJVypjJOzt207CTNChfH7UbefGEvboep6KYj8W7t2SpXD52is86NxlqFY1yWjEoQUP4XG8Z69536Iyu2tXlzrF2VTdIfL70TfHzNigZc5aBi8Gkp8vZ31_hTGMgNZpCnwh5qt-oJVTzY23s_mfrefrnrbRVabrwrdnSl-GdD9aQxJ_GYbGL0doE3zBCMFkaBMA1Adi05oaEqyRqTT3Ftpc-pPl6F"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Stats Ribbon -->
+<div class="bg-primary py-12 px-6 lg:px-20">
+<div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+<div>
+<p class="text-white/60 text-sm font-medium mb-1">Propiedades</p>
+<h3 class="text-white text-4xl font-extrabold">500+</h3>
+<p class="text-emerald-400 text-xs mt-2 flex items-center justify-center gap-1 font-bold">
+<span class="material-symbols-outlined text-sm">trending_up</span> +12% anual
+                </p>
+</div>
+<div>
+<p class="text-white/60 text-sm font-medium mb-1">Ingresos extra</p>
+<h3 class="text-white text-4xl font-extrabold">35%</h3>
+<p class="text-emerald-400 text-xs mt-2 flex items-center justify-center gap-1 font-bold">
+<span class="material-symbols-outlined text-sm">trending_up</span> Promedio
+                </p>
+</div>
+<div>
+<p class="text-white/60 text-sm font-medium mb-1">Satisfacción</p>
+<h3 class="text-white text-4xl font-extrabold">99%</h3>
+<p class="text-emerald-400 text-xs mt-2 flex items-center justify-center gap-1 font-bold">
+<span class="material-symbols-outlined text-sm">stars</span> Reviews 5.0
+                </p>
+</div>
+<div>
+<p class="text-white/60 text-sm font-medium mb-1">Países</p>
+<h3 class="text-white text-4xl font-extrabold">12</h3>
+<p class="text-emerald-400 text-xs mt-2 flex items-center justify-center gap-1 font-bold">
+<span class="material-symbols-outlined text-sm">public</span> Global
+                </p>
+</div>
+</div>
+</div>
+<!-- Services Preview Section -->
+<section class="py-24 px-6 lg:px-20 bg-white">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-16">
+<h2 class="text-3xl lg:text-4xl font-extrabold text-primary mb-4 tracking-tight">Nuestros Servicios Especializados</h2>
+<p class="text-slate-500 max-w-2xl mx-auto text-lg">Impulsamos tu negocio de rentas cortas con tecnología de punta y estrategia de mercado.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Service 1 -->
+<div class="group p-8 rounded-xl border border-slate-100 hover:border-primary/20 hover:shadow-xl hover:shadow-primary/5 transition-all bg-background-light">
+<div class="w-12 h-12 bg-primary text-white rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">payments</span>
+</div>
+<h4 class="text-xl font-bold text-primary mb-3">Revenue Management</h4>
+<p class="text-slate-600 text-sm leading-relaxed">Algoritmos de precios dinámicos inteligentes para maximizar la ocupación y el RevPAR.</p>
+</div>
+<!-- Service 2 -->
+<div class="group p-8 rounded-xl border border-slate-100 hover:border-primary/20 hover:shadow-xl hover:shadow-primary/5 transition-all bg-background-light">
+<div class="w-12 h-12 bg-primary text-white rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">auto_graph</span>
+</div>
+<h4 class="text-xl font-bold text-primary mb-3">Listing Optimization</h4>
+<p class="text-slate-600 text-sm leading-relaxed">Copywriting SEO y fotografía estratégica para destacar en Airbnb, Booking y VRBO.</p>
+</div>
+<!-- Service 3 -->
+<div class="group p-8 rounded-xl border border-slate-100 hover:border-primary/20 hover:shadow-xl hover:shadow-primary/5 transition-all bg-background-light">
+<div class="w-12 h-12 bg-primary text-white rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">support_agent</span>
+</div>
+<h4 class="text-xl font-bold text-primary mb-3">Guest Experience</h4>
+<p class="text-slate-600 text-sm leading-relaxed">Atención personalizada multilingüe 24/7 para garantizar calificaciones de 5 estrellas.</p>
+</div>
+<!-- Service 4 -->
+<div class="group p-8 rounded-xl border border-slate-100 hover:border-primary/20 hover:shadow-xl hover:shadow-primary/5 transition-all bg-background-light">
+<div class="w-12 h-12 bg-primary text-white rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">gavel</span>
+</div>
+<h4 class="text-xl font-bold text-primary mb-3">Legal Compliance</h4>
+<p class="text-slate-600 text-sm leading-relaxed">Gestión integral de licencias turísticas y cumplimiento normativo local automatizado.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Why Us Section -->
+<section class="py-24 px-6 lg:px-20 bg-background-light">
+<div class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-16 items-center">
+<div class="flex-1">
+<div class="grid grid-cols-2 gap-4">
+<div class="space-y-4 pt-12">
+<img alt="Modern Villa" class="rounded-xl shadow-lg w-full h-64 object-cover" data-alt="Luxury modern villa interior" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdigyNTUnBWQgFAUpEBD8R2vjsBOIUFBsyR_w26Jmy9-b2UH9heJVypjJOzt207CTNChfH7UbefGEvboep6KYj8W7t2SpXD52is86NxlqFY1yWjEoQUP4XG8Z69536Iyu2tXlzrF2VTdIfL70TfHzNigZc5aBi8Gkp8vZ31_hTGMgNZpCnwh5qt-oJVTzY23s_mfrefrnrbRVabrwrdnSl-GdD9aQxJ_GYbGL0doE3zBCMFkaBMA1Adi05oaEqyRqTT3Ftpc-pPl6F"/>
+<img alt="Office Space" class="rounded-xl shadow-lg w-full h-48 object-cover" data-alt="Clean minimal office space with laptops" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7q7lbVXOett5hgf6Y3wkJfwg8ii5e0yDWafNWKf-unC-UovodmOJ5phlPLYqh2VNZGmSINFH4kl3io29KvXVOxZW_rD4o3FN0sYJXlyBqXTI0U2BZ_88mLX-7nMzBEs11UHUR21XqEbmf714XOXInPiJD3YNXDpStdqyKxaLzm5XN4Cnw5sWR9GlpE-D6a5bhnTCn06I6B5mCi3t2vOl_FSdv2An8Io65nb6TtkaSevDmV0VHITVugOzB43V-_C5BihAo8uud6ka1"/>
+</div>
+<div class="space-y-4">
+<img alt="Team Collaboration" class="rounded-xl shadow-lg w-full h-48 object-cover" data-alt="Team of experts collaborating in office" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAExajWhijRjbH3yoMzrF1uVx_UebpR4ox5yhAuqBZ3FnRgLEGS1f1mWIH2MlQwtdz_82MrNmV9XDaz142mcfRys9WPfRLMCTaQ062KuJ0-5gIwyh1L_OD9eRqac0sjGI7ReuI3Zwa_FqeSUCS8qViWOSGVxGHKKqFpdmH4mYJhFQz16rqFDxhQdSjmRDplnYEL5CtncXdQpRI7t2GH9a_029pFC5FhyxKi02KBdIuJEBcXWwp_5crHZBenwP5Vtlc-NpGvHIMXbUaX"/>
+<img alt="Real Estate" class="rounded-xl shadow-lg w-full h-64 object-cover" data-alt="Contemporary living room with large window" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGI46An0QLQcRvw3JIJCI1gRWQtVJnx3RQyiYLHyl2eQe_3eQH35RIvwdcOgWYajKtTK9XQ9jooo93gh8KZizinappi1BsRa1CWMcFEonW3RQP6sfv98-I9VdnpqfKAO5-kgdH-nyBZQ1MYg_1ANq625mRxigx_Ami8f-4FFgF3e3ILC7rqM3BqTkZQ0AdLxSI-zfEK0bk9xxjxbkn1XH6ODJstUoNZx0ACnOzidHEDbnvaqQC4NXyEdeuCinEWC7Cl-ou8l7miwuJ"/>
+</div>
+</div>
+</div>
+<div class="flex-1">
+<h2 class="text-4xl font-extrabold text-primary mb-6">Por qué los anfitriones élite eligen Mundo BNB</h2>
+<ul class="space-y-6">
+<li class="flex gap-4">
+<div class="flex-shrink-0 w-6 h-6 rounded-full bg-primary flex items-center justify-center mt-1">
+<span class="material-symbols-outlined text-white text-xs font-bold">check</span>
+</div>
+<div>
+<p class="font-bold text-primary mb-1 text-lg">Control Total vía SaaS</p>
+<p class="text-slate-600">Accede a tus métricas en tiempo real desde cualquier dispositivo con nuestra plataforma intuitiva.</p>
+</div>
+</li>
+<li class="flex gap-4">
+<div class="flex-shrink-0 w-6 h-6 rounded-full bg-primary flex items-center justify-center mt-1">
+<span class="material-symbols-outlined text-white text-xs font-bold">check</span>
+</div>
+<div>
+<p class="font-bold text-primary mb-1 text-lg">Optimización Algorítmica</p>
+<p class="text-slate-600">No dejamos el precio al azar. Usamos datos históricos y tendencias para cobrar siempre el valor máximo.</p>
+</div>
+</li>
+<li class="flex gap-4">
+<div class="flex-shrink-0 w-6 h-6 rounded-full bg-primary flex items-center justify-center mt-1">
+<span class="material-symbols-outlined text-white text-xs font-bold">check</span>
+</div>
+<div>
+<p class="font-bold text-primary mb-1 text-lg">Soporte Ejecutivo</p>
+<p class="text-slate-600">Un Account Manager dedicado se encargará de que tu propiedad sea la más rentable del sector.</p>
+</div>
+</li>
+</ul>
+<div class="mt-10">
+<button class="bg-primary text-white px-8 py-4 rounded-lg font-bold hover:bg-primary/90 transition-all flex items-center gap-2">
+                        Ver planes de gestión <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA Section -->
+<section class="py-20 px-6 lg:px-20">
+<div class="max-w-5xl mx-auto bg-primary rounded-2xl p-12 lg:p-20 text-center relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
+<svg height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<pattern height="40" id="grid" patternunits="userSpaceOnUse" width="40">
+<path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" stroke-width="1"></path>
+</pattern>
+</defs>
+<rect fill="url(#grid)" height="100%" width="100%"></rect>
+</svg>
+</div>
+<div class="relative z-10">
+<h2 class="text-3xl lg:text-5xl font-extrabold text-white mb-6">¿Listo para transformar tu propiedad?</h2>
+<p class="text-white/70 text-lg mb-10 max-w-2xl mx-auto">
+                    Únete a los cientos de anfitriones que ya están maximizando sus ingresos con nuestra tecnología y equipo experto.
+                </p>
+<div class="flex flex-col sm:flex-row justify-center gap-4">
+<button class="bg-white text-primary px-10 py-4 rounded-lg font-bold text-lg hover:bg-slate-50 transition-all">
+                        Inicia tu Aplicación
+                    </button>
+<button class="border border-white/30 text-white px-10 py-4 rounded-lg font-bold text-lg hover:bg-white/10 transition-all">
+                        Hablar con un experto
+                    </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-white py-12 px-6 lg:px-20 border-t border-slate-100">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+<div class="col-span-1 md:col-span-1">
+<div class="flex items-center gap-3 mb-6">
+<img alt="Mundo BNB Logo" class="h-10 w-auto object-contain" data-alt="Small Mundo BNB logo" src="{{DATA:IMAGE:IMAGE_21}}"/>
+</div>
+<p class="text-slate-500 text-sm leading-relaxed">
+                    Líderes en gestión tecnológica de alojamientos vacacionales de alto impacto. Elevamos el estándar del hospitality.
+                </p>
+</div>
+<div>
+<h5 class="font-bold text-primary mb-6">Empresa</h5>
+<ul class="space-y-4 text-sm text-slate-500">
+<li><a class="hover:text-primary transition-colors" href="#">Nosotros</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Carreras</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Blog</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Prensa</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-bold text-primary mb-6">Legal</h5>
+<ul class="space-y-4 text-sm text-slate-500">
+<li><a class="hover:text-primary transition-colors" href="#">Términos de Servicio</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Política de Privacidad</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Cookies</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Seguridad</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-bold text-primary mb-6">Contacto</h5>
+<p class="text-sm text-slate-500 mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">mail</span> hello@mundobnb.com
+                </p>
+<p class="text-sm text-slate-500 mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">location_on</span> Madrid, España
+                </p>
+<div class="flex gap-4">
+<a class="w-8 h-8 rounded-full bg-primary/5 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined text-sm">share</span>
+</a>
+<a class="w-8 h-8 rounded-full bg-primary/5 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined text-sm">person_pin</span>
+</a>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto pt-12 mt-12 border-t border-slate-50 flex flex-col md:row items-center justify-between gap-4">
+<p class="text-slate-400 text-xs text-center">
+                © 2024 Mundo BNB. Todos los derechos reservados. Optimizado para el mercado de alquiler vacacional global.
+            </p>
+<div class="flex gap-6">
+<span class="material-symbols-outlined text-slate-300">shield</span>
+<span class="material-symbols-outlined text-slate-300">lock</span>
+<span class="material-symbols-outlined text-slate-300">verified_user</span>
+</div>
+</div>
+</footer>
+</body></html>

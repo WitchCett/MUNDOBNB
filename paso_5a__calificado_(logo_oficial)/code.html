@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0b203c",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#121820",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Manrope', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased">
+<!-- Main Container -->
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<!-- Header / Nav -->
+<header class="flex items-center justify-between border-b border-primary/10 bg-white dark:bg-background-dark px-6 py-4 md:px-20 lg:px-40">
+<div class="flex items-center gap-3">
+<img alt="Mundo BNB Logo" class="h-10 w-auto object-contain" src="{{DATA:IMAGE:IMAGE_13}}"/>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<nav class="flex items-center gap-6">
+<a class="text-sm font-semibold hover:text-primary/70 transition-colors" href="#">Asesoría</a>
+<a class="text-sm font-semibold hover:text-primary/70 transition-colors" href="#">Metodología</a>
+<a class="text-sm font-semibold hover:text-primary/70 transition-colors" href="#">Resultados</a>
+</nav>
+<div class="flex items-center gap-3">
+<img alt="Mundo BNB Logo" class="h-10 w-auto object-contain" src="{{DATA:IMAGE:IMAGE_13}}"/>
+</div>
+</div>
+</header>
+<main class="flex flex-1 flex-col items-center px-4 py-10 md:px-10 lg:px-20">
+<!-- Progress Stepper -->
+<div class="w-full max-w-4xl mb-12">
+<div class="flex items-center justify-between mb-2">
+<span class="text-sm font-bold text-primary dark:text-slate-300">Paso 5 de 5: Agendar Sesión</span>
+<span class="text-sm font-bold text-primary dark:text-slate-300">100% Completado</span>
+</div>
+<div class="h-2.5 w-full rounded-full bg-slate-200 dark:bg-slate-800">
+<div class="h-2.5 rounded-full bg-primary" style="width: 100%;"></div>
+</div>
+</div>
+<!-- Success Section -->
+<section class="mb-12 text-center max-w-3xl">
+<div class="mb-6 flex justify-center">
+<div class="flex h-16 w-16 items-center justify-center rounded-full bg-green-100 text-green-600">
+<span class="material-symbols-outlined text-4xl">check_circle</span>
+</div>
+</div>
+<h1 class="mb-4 text-3xl font-extrabold tracking-tight text-primary md:text-5xl dark:text-slate-100">
+                    ¡Felicitaciones! Calificás para una asesoría estratégica
+                </h1>
+<p class="text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
+                    Basado en tus respuestas, nuestro equipo ha determinado que tienes el perfil ideal para escalar tu negocio en BNB. El siguiente paso es agendar tu sesión privada 1:1 con un experto.
+                </p>
+</section>
+<!-- Main Interactive Area: Calendar & Profile Split -->
+<div class="grid w-full max-w-6xl grid-cols-1 gap-8 lg:grid-cols-12">
+<!-- Left Column: Expert Profile & Info -->
+<div class="lg:col-span-4 flex flex-col gap-6">
+<div class="rounded-xl border border-primary/10 bg-white p-8 shadow-sm dark:bg-background-dark/50">
+<div class="mb-6 flex flex-col items-center text-center">
+<div class="mb-4 h-32 w-32 overflow-hidden rounded-full border-4 border-primary/5 shadow-lg">
+<img class="h-full w-full object-cover" data-alt="Professional portrait of the strategic advisor" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEkdj1vG9h5k1ay5T_2AO0m0oepNQadjprtx9UXbCBc0D-b3atMzSX_poFPGo2YXxsYoxbx_z6oPsdW36xpc1FV2otxSwdMpAPliRHKlK0njmYSHNJ5tddTpdeZNTNO_4uBycWzZv_CTZJpkvKiW04Q404rih8GS0reuafAjQ3IMGFGC3sFhWefLunpMqBEEEWlekL4rAQFR-Bju6BtevbJyBaSv5AnMHmYYOIiGc75Nh8mFGZzrM-Qoz1H9MMqPtvrZ-lvcw3cD6L"/>
+</div>
+<h3 class="text-xl font-bold text-primary dark:text-slate-100">Carlos Méndez</h3>
+<p class="text-sm font-medium text-slate-500 uppercase tracking-wider">Estratega Senior BNB</p>
+<div class="mt-2 flex items-center gap-1 text-yellow-500">
+<span class="material-symbols-outlined fill-1 text-base">star</span>
+<span class="material-symbols-outlined fill-1 text-base">star</span>
+<span class="material-symbols-outlined fill-1 text-base">star</span>
+<span class="material-symbols-outlined fill-1 text-base">star</span>
+<span class="material-symbols-outlined fill-1 text-base">star</span>
+<span class="ml-1 text-sm font-bold text-slate-700 dark:text-slate-300">4.9/5</span>
+</div>
+</div>
+<div class="space-y-4 border-t border-primary/10 pt-6">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary/60">schedule</span>
+<div>
+<p class="text-sm font-bold text-primary dark:text-slate-200">Duración</p>
+<p class="text-sm text-slate-600 dark:text-slate-400">45 minutos de alto valor</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary/60">videocam</span>
+<div>
+<p class="text-sm font-bold text-primary dark:text-slate-200">Plataforma</p>
+<p class="text-sm text-slate-600 dark:text-slate-400">Videollamada vía Zoom</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary/60">payments</span>
+<div>
+<p class="text-sm font-bold text-primary dark:text-slate-200">Costo</p>
+<p class="text-sm font-bold text-green-600 uppercase">Sin cargo para calificados</p>
+</div>
+</div>
+</div>
+</div>
+<div class="rounded-xl bg-primary p-6 text-white">
+<h4 class="mb-2 font-bold italic">"Esta sesión me ahorró 2 años de errores."</h4>
+<p class="text-sm text-slate-300">— Marta R., Host en Madrid</p>
+</div>
+</div>
+<!-- Right Column: Booking Calendar -->
+<div class="lg:col-span-8">
+<div class="rounded-xl border border-primary/10 bg-white shadow-xl dark:bg-background-dark">
+<div class="border-b border-primary/10 p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+<div>
+<h2 class="text-xl font-bold text-primary dark:text-slate-100">Selecciona Fecha y Hora</h2>
+<p class="text-sm text-slate-500">Zona horaria: Madrid, España (GMT+2)</p>
+</div>
+<div class="flex items-center gap-2 rounded-lg bg-background-light px-3 py-1.5 dark:bg-slate-800">
+<span class="material-symbols-outlined text-sm">public</span>
+<span class="text-xs font-semibold">Cambiar Zona</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2">
+<!-- Date Picker Mock -->
+<div class="p-6 md:border-r border-primary/10">
+<div class="mb-4 flex items-center justify-between">
+<span class="font-bold text-primary dark:text-slate-200">Octubre 2023</span>
+<div class="flex gap-2">
+<button class="flex h-8 w-8 items-center justify-center rounded-full border border-primary/10 hover:bg-slate-100 dark:hover:bg-slate-800">
+<span class="material-symbols-outlined text-sm">chevron_left</span>
+</button>
+<button class="flex h-8 w-8 items-center justify-center rounded-full border border-primary/10 hover:bg-slate-100 dark:hover:bg-slate-800">
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-7 gap-1 text-center text-xs font-bold text-slate-400 mb-2">
+<span>LU</span><span>MA</span><span>MI</span><span>JU</span><span>VI</span><span>SA</span><span>DO</span>
+</div>
+<div class="grid grid-cols-7 gap-1 text-center">
+<!-- Simplified Calendar Grid -->
+<div class="aspect-square flex items-center justify-center text-slate-300">25</div>
+<div class="aspect-square flex items-center justify-center text-slate-300">26</div>
+<div class="aspect-square flex items-center justify-center text-slate-300">27</div>
+<div class="aspect-square flex items-center justify-center text-slate-300">28</div>
+<div class="aspect-square flex items-center justify-center text-slate-300">29</div>
+<div class="aspect-square flex items-center justify-center text-slate-300">30</div>
+<div class="aspect-square flex items-center justify-center rounded-lg hover:bg-primary/5 cursor-pointer">1</div>
+<div class="aspect-square flex items-center justify-center rounded-lg hover:bg-primary/5 cursor-pointer">2</div>
+<div class="aspect-square flex items-center justify-center rounded-lg hover:bg-primary/5 cursor-pointer">3</div>
+<div class="aspect-square flex items-center justify-center rounded-lg hover:bg-primary/5 cursor-pointer">4</div>
+<div class="aspect-square flex items-center justify-center rounded-lg bg-primary text-white font-bold">5</div>
+<div class="aspect-square flex items-center justify-center rounded-lg hover:bg-primary/5 cursor-pointer">6</div>
+<div class="aspect-square flex items-center justify-center text-slate-300">7</div>
+<div class="aspect-square flex items-center justify-center text-slate-300">8</div>
+<div class="aspect-square flex items-center justify-center rounded-lg hover:bg-primary/5 cursor-pointer">9</div>
+<div class="aspect-square flex items-center justify-center rounded-lg hover:bg-primary/5 cursor-pointer">10</div>
+<div class="aspect-square flex items-center justify-center rounded-lg hover:bg-primary/5 cursor-pointer">11</div>
+<div class="aspect-square flex items-center justify-center rounded-lg hover:bg-primary/5 cursor-pointer">12</div>
+<div class="aspect-square flex items-center justify-center rounded-lg hover:bg-primary/5 cursor-pointer">13</div>
+<div class="aspect-square flex items-center justify-center text-slate-300">14</div>
+<div class="aspect-square flex items-center justify-center text-slate-300">15</div>
+</div>
+</div>
+<!-- Time Slot Picker -->
+<div class="p-6">
+<h3 class="mb-4 font-bold text-primary dark:text-slate-200">Jueves, 5 de Octubre</h3>
+<div class="space-y-3 max-h-[300px] overflow-y-auto pr-2 custom-scrollbar">
+<button class="w-full rounded-lg border border-primary/20 py-3 font-semibold text-primary hover:bg-primary hover:text-white transition-all dark:text-slate-200 dark:border-primary/40">
+                                        09:00 AM
+                                    </button>
+<button class="w-full rounded-lg border border-primary/20 py-3 font-semibold text-primary hover:bg-primary hover:text-white transition-all dark:text-slate-200 dark:border-primary/40">
+                                        10:30 AM
+                                    </button>
+<button class="w-full rounded-lg border-2 border-primary bg-primary/5 py-3 font-bold text-primary dark:text-slate-200">
+                                        11:15 AM
+                                    </button>
+<button class="w-full rounded-lg border border-primary/20 py-3 font-semibold text-primary hover:bg-primary hover:text-white transition-all dark:text-slate-200 dark:border-primary/40">
+                                        02:00 PM
+                                    </button>
+<button class="w-full rounded-lg border border-primary/20 py-3 font-semibold text-primary hover:bg-primary hover:text-white transition-all dark:text-slate-200 dark:border-primary/40">
+                                        04:30 PM
+                                    </button>
+</div>
+</div>
+</div>
+<!-- Footer Actions -->
+<div class="border-t border-primary/10 bg-background-light/50 p-6 dark:bg-slate-800/30">
+<div class="flex flex-col sm:flex-row items-center justify-between gap-6">
+<div class="flex items-center gap-2 text-slate-500">
+<span class="material-symbols-outlined text-green-500">lock</span>
+<span class="text-xs font-medium">Tus datos están protegidos y son privados.</span>
+</div>
+<button class="w-full sm:w-auto min-w-[200px] rounded-lg bg-primary px-8 py-4 text-center font-bold text-white shadow-lg hover:scale-[1.02] active:scale-[0.98] transition-all">
+                                    Confirmar Agendamiento
+                                </button>
+</div>
+</div>
+</div>
+<!-- Additional Trust Info -->
+<div class="mt-8 flex flex-wrap justify-center gap-8 opacity-60">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined">verified</span>
+<span class="text-sm font-bold">Consultoría Oficial</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined">event_available</span>
+<span class="text-sm font-bold">Soporte Inmediato</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined">groups</span>
+<span class="text-sm font-bold">+500 Hosts Asesorados</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Minimal Footer -->
+<footer class="mt-auto border-t border-primary/5 bg-white py-8 dark:bg-background-dark">
+<div class="flex flex-col items-center gap-4 px-6 md:flex-row md:justify-between md:px-20 lg:px-40">
+<p class="text-xs text-slate-400">© 2023 Mundo BNB. Todos los derechos reservados.</p>
+<div class="flex gap-6">
+<a class="text-xs font-medium text-slate-400 hover:text-primary" href="#">Términos y Condiciones</a>
+<a class="text-xs font-medium text-slate-400 hover:text-primary" href="#">Política de Privacidad</a>
+</div>
+</div>
+</footer>
+</div>
+</body></html>

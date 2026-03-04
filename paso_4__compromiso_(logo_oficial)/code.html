@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Mundo BNB - Compromiso y Desafíos</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "primary": "#0b203c",
+                "background-light": "#f6f7f8",
+                "background-dark": "#121820",
+              },
+              fontFamily: {
+                "display": ["Manrope", "sans-serif"]
+              },
+              borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            },
+          },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Manrope', sans-serif;
+        }
+        .form-input:focus {
+            border-color: #0b203c !important;
+            ring: 2px;
+            ring-color: #0b203c;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark min-h-screen text-slate-900 dark:text-slate-100">
+<div class="layout-container flex h-full grow flex-col">
+<!-- Top Navigation Bar -->
+<header class="flex items-center justify-between border-b border-primary/10 bg-white dark:bg-background-dark px-6 md:px-20 py-4 sticky top-0 z-50">
+<div class="flex items-center gap-3"><img alt="Mundo BNB Logo" class="h-10 md:h-12 w-auto object-contain" src="{{DATA:IMAGE:IMAGE_13}}"/></div>
+<div class="flex items-center gap-6">
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-slate-600 hover:text-primary dark:text-slate-400 dark:hover:text-white text-sm font-semibold transition-colors" href="#">Dashboard</a>
+<a class="text-slate-600 hover:text-primary dark:text-slate-400 dark:hover:text-white text-sm font-semibold transition-colors" href="#">Propiedades</a>
+</nav>
+<div class="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center border border-primary/20 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="User profile avatar professional photo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUyKRDxQmcydz4vAR5CVf3ZSzFAz8bm0OccwIkpC4mCbcWA1jpdauD7Zh6DBrzV-SImtY1o98Zq7QHNdtCXCUgUmhjE0l8Yc6iCKry9X1RzyU-xFrpFW7qh3nWPTSoLyA5md8mrpSC59qIpFByOAshaJ7vU0WWBOY-4JZAdfmJdcqGB89kUv7_zbMwYf9ZvWqsym2UXYZE7ONQfP8t5QpLcrOZuB579U1v_qJw6DLFrCyJncWJYNO24jTtskdYgKseCaCntmR25b2q"/>
+</div>
+</div>
+</header>
+<main class="flex-1 flex flex-col items-center py-12 px-4 sm:px-6">
+<div class="w-full max-w-2xl bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-primary/5 p-8 md:p-12">
+<!-- Progress Section -->
+<div class="mb-10">
+<div class="flex justify-between items-end mb-3">
+<div>
+<span class="text-xs font-bold uppercase tracking-widest text-primary/60 dark:text-slate-400">Paso Final</span>
+<h3 class="text-primary dark:text-white text-lg font-bold">Compromiso y Desafíos</h3>
+</div>
+<div class="text-right">
+<span class="text-sm font-bold text-primary dark:text-slate-200">75% Completado</span>
+<p class="text-xs text-slate-500">Paso 4 de 4</p>
+</div>
+</div>
+<div class="w-full bg-primary/10 rounded-full h-2.5 overflow-hidden">
+<div class="bg-primary h-full rounded-full transition-all duration-500" style="width: 75%;"></div>
+</div>
+</div>
+<!-- Form Introduction -->
+<div class="text-center mb-10">
+<h1 class="text-3xl font-extrabold text-primary dark:text-white mb-3">Último paso del proceso</h1>
+<p class="text-slate-600 dark:text-slate-400 max-w-md mx-auto">
+                        Ayúdanos a entender tu situación actual para personalizar tu experiencia en Mundo BNB y maximizar tus resultados.
+                    </p>
+</div>
+<!-- Form Questionnaire -->
+<form class="space-y-8">
+<!-- Question 1: Current Challenge -->
+<div class="space-y-3">
+<label class="block text-sm font-bold text-primary dark:text-slate-200" for="challenge">
+                            ¿Cuál es tu principal desafío actual?
+                        </label>
+<textarea class="w-full rounded-lg border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 focus:border-primary focus:ring-primary/20 transition-all placeholder:text-slate-400" id="challenge" placeholder="Describe brevemente los obstáculos que enfrentas hoy en tu negocio..." rows="4"></textarea>
+</div>
+<!-- Question 2: 3-Month Goal -->
+<div class="space-y-3">
+<label class="block text-sm font-bold text-primary dark:text-slate-200" for="goal">
+                            ¿Cuál es tu objetivo en los próximos 3 meses?
+                        </label>
+<input class="w-full rounded-lg border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 focus:border-primary focus:ring-primary/20 transition-all placeholder:text-slate-400 h-12" id="goal" placeholder="Ej: Escalar a 5 propiedades, optimizar procesos..." type="text"/>
+</div>
+<!-- Question 3: Strategic Changes -->
+<div class="space-y-4">
+<p class="text-sm font-bold text-primary dark:text-slate-200">¿Estás dispuesto a implementar cambios estratégicos?</p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<label class="relative flex items-center justify-center p-4 rounded-lg border-2 border-slate-100 dark:border-slate-800 bg-slate-50 dark:bg-slate-800/50 cursor-pointer hover:bg-slate-100 dark:hover:bg-slate-800 transition-all group">
+<input class="sr-only peer" name="commitment" type="radio" value="yes"/>
+<div class="peer-checked:border-primary peer-checked:bg-primary/5 absolute inset-0 rounded-lg border-2 border-transparent transition-all"></div>
+<div class="relative flex items-center gap-3">
+<span class="material-symbols-outlined text-green-500">check_circle</span>
+<span class="font-semibold text-slate-700 dark:text-slate-300">Sí, estoy listo</span>
+</div>
+</label>
+<label class="relative flex items-center justify-center p-4 rounded-lg border-2 border-slate-100 dark:border-slate-800 bg-slate-50 dark:bg-slate-800/50 cursor-pointer hover:bg-slate-100 dark:hover:bg-slate-800 transition-all group">
+<input class="sr-only peer" name="commitment" type="radio" value="no"/>
+<div class="peer-checked:border-slate-400 peer-checked:bg-slate-100 absolute inset-0 rounded-lg border-2 border-transparent transition-all"></div>
+<div class="relative flex items-center gap-3">
+<span class="material-symbols-outlined text-slate-400">cancel</span>
+<span class="font-semibold text-slate-700 dark:text-slate-300">Aún no lo sé</span>
+</div>
+</label>
+</div>
+</div>
+<!-- Actions -->
+<div class="pt-6 flex flex-col-reverse sm:flex-row gap-4 items-center">
+<button class="w-full sm:w-auto px-8 py-3 text-sm font-bold text-slate-500 hover:text-primary dark:text-slate-400 dark:hover:text-white transition-colors flex items-center justify-center gap-2" type="button">
+<span class="material-symbols-outlined text-lg">arrow_back</span>
+                            Paso anterior
+                        </button>
+<button class="w-full sm:flex-1 bg-primary hover:bg-primary/90 text-white rounded-lg px-8 py-4 font-bold text-lg shadow-lg shadow-primary/20 transition-all flex items-center justify-center gap-2" type="submit">
+                            Finalizar aplicación
+                            <span class="material-symbols-outlined">send</span>
+</button>
+</div>
+</form>
+<div class="mt-8 flex items-center justify-center gap-2 text-slate-400 text-xs">
+<span class="material-symbols-outlined text-sm">lock</span>
+<p>Tus datos están protegidos y solo se utilizarán para tu perfil de Mundo BNB.</p>
+</div>
+</div>
+<!-- Visual Decorative Element -->
+<div class="mt-12 text-center opacity-50">
+<div class="flex justify-center gap-8 items-center grayscale">
+<span class="material-symbols-outlined text-4xl">verified_user</span>
+<span class="material-symbols-outlined text-4xl">real_estate_agent</span>
+<span class="material-symbols-outlined text-4xl">analytics</span>
+</div>
+</div>
+</main>
+<footer class="py-10 border-t border-primary/5 text-center">
+<p class="text-slate-500 text-sm">© 2024 Mundo BNB. Todos los derechos reservados.</p>
+</footer>
+</div>
+</body></html>

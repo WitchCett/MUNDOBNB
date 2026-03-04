@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicación | Mundo BNB - Asesoría Estratégica</title>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .step {
+            display: none;
+            width: 100%;
+        }
+
+        .step.active {
+            display: block;
+        }
+
+        .premium-gradient {
+            background: radial-gradient(circle at top right, rgba(11, 32, 60, 0.05) 0%, transparent 40%),
+                radial-gradient(circle at bottom left, rgba(11, 32, 60, 0.03) 0%, transparent 30%);
+        }
+
+        .calendar-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 4px;
+            text-align: center;
+        }
+
+        .calendar-day {
+            aspect-ratio: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            font-size: 0.875rem;
+            transition: var(--transition);
+        }
+
+        .calendar-day:hover:not(.empty) {
+            background: var(--bg-light);
+        }
+
+        .calendar-day.active {
+            background: var(--primary);
+            color: white;
+            font-weight: 700;
+        }
+
+        .calendar-day.empty {
+            cursor: default;
+            color: #cbd5e1;
+        }
+
+        .time-slot {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #e2e8f0;
+            border-radius: 0.5rem;
+            background: white;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .time-slot:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+
+        .time-slot.selected {
+            background: var(--bg-light);
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+
+        .radio-card {
+            position: relative;
+            padding: 1rem;
+            border: 2px solid #f1f5f9;
+            border-radius: 1rem;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .radio-card input {
+            position: absolute;
+            opacity: 0;
+        }
+
+        .radio-card:hover {
+            background: var(--bg-light);
+        }
+
+        .radio-card.selected {
+            border-color: var(--primary);
+            background: rgba(11, 32, 60, 0.05);
+        }
+    </style>
+</head>
+
+<body class="bg-background-light premium-gradient min-h-screen">
+    <header class="container"
+        style="padding: 1.5rem 0; display: flex; justify-content: space-between; align-items: center;">
+        <a href="index.html">
+            <img src="https://lh3.googleusercontent.com/aida/AOfcidVNqyD8PYtuTj5P4wH2S16KbO5_ghz-isCMj4TPfl3GunbkFvpeEs8vfchrpdYl7soY5HSlmYtuw76Y4l1_JIIYCybMSU8AxPAP6Pc2kgNrQXlI5o1tyKIashsERFu7cY5WdtRYLgqLEUs36geTSqmM5EZqPyFJ0yaTnyNo3N9cAvH_I_lII2HjG585xTTKM0M4sZWcFT1NBdeMi0wDjy4RSiftfqYRdioVpfLTcudiPuu-o8uB5QDxMpAj"
+                alt="Mundo BNB" style="height: 40px;">
+        </a>
+        <div style="display: flex; gap: 0.5rem;">
+            <button class="nav-icon-btn"><span class="material-symbols-outlined">language</span></button>
+            <button class="nav-icon-btn"><span class="material-symbols-outlined">help</span></button>
+        </div>
+    </header>
+
+    <main class="container" style="max-width: 700px; padding: 3rem 0;">
+
+        <!-- Step 1: Intro -->
+        <div class="step active" id="step-1">
+            <div style="text-align: center;">
+                <div
+                    style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.25rem 1rem; background: rgba(11, 32, 60, 0.05); border-radius: 999px; color: var(--primary); font-size: 0.75rem; font-weight: 800; margin-bottom: 2rem;">
+                    <span class="pulse"
+                        style="width: 8px; height: 8px; background: var(--primary); border-radius: 50%;"></span>
+                    Fase 1: Introducción Estratégica
+                </div>
+                <h1 style="font-size: 3.5rem; margin-bottom: 1.5rem; line-height: 1.1;">Aplicá a una <br><span
+                        style="color: var(--text-slate);">asesoría estratégica</span></h1>
+                <p style="color: var(--text-slate); font-size: 1.125rem; margin-bottom: 3rem; line-height: 1.6;">Este es
+                    un proceso exclusivo diseñado para propietarios que buscan escalar su rentabilidad. Evaluaremos tu
+                    perfil para asegurar que nuestras estrategias se alineen con tus objetivos.</p>
+
+                <button onclick="nextStep()" class="btn btn-primary"
+                    style="width: 100%; max-width: 400px; padding: 1.25rem; font-size: 1.125rem; display: flex; align-items: center; justify-content: center; gap: 0.5rem; margin: 0 auto 1.5rem;">
+                    Comenzar aplicación <span class="material-symbols-outlined">arrow_forward</span>
+                </button>
+                <div
+                    style="display: flex; align-items: center; justify-content: center; gap: 0.5rem; color: var(--text-slate); font-size: 0.875rem;">
+                    <span class="material-symbols-outlined" style="font-size: 1rem;">timer</span>
+                    Tiempo estimado: 2 minutos
+                </div>
+
+                <div
+                    style="margin-top: 4rem; display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; border-top: 1px solid #e2e8f0; padding-top: 3rem;">
+                    <div><span class="material-symbols-outlined"
+                            style="color: var(--primary); margin-bottom: 0.5rem;">analytics</span>
+                        <p
+                            style="font-size: 0.625rem; font-weight: 800; text-transform: uppercase; color: #94a3b8; letter-spacing: 0.1em;">
+                            Análisis ROI</p>
+                    </div>
+                    <div><span class="material-symbols-outlined"
+                            style="color: var(--primary); margin-bottom: 0.5rem;">verified_user</span>
+                        <p
+                            style="font-size: 0.625rem; font-weight: 800; text-transform: uppercase; color: #94a3b8; letter-spacing: 0.1em;">
+                            Exclusividad</p>
+                    </div>
+                    <div><span class="material-symbols-outlined"
+                            style="color: var(--primary); margin-bottom: 0.5rem;">trending_up</span>
+                        <p
+                            style="font-size: 0.625rem; font-weight: 800; text-transform: uppercase; color: #94a3b8; letter-spacing: 0.1em;">
+                            Escalabilidad</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Progress Bar (Steps 2-4) -->
+        <div id="progress-container" style="display: none; margin-bottom: 3rem;">
+            <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 0.75rem;">
+                <div>
+                    <p id="step-label"
+                        style="font-size: 0.75rem; font-weight: 800; color: var(--primary); text-transform: uppercase; letter-spacing: 0.1em;">
+                        Paso 2 de 4</p>
+                    <h2 id="step-title" style="font-size: 1.5rem;">Información Básica</h2>
+                </div>
+                <p id="progress-percent" style="font-size: 0.875rem; font-weight: 700; color: var(--text-slate);">25%
+                    completado</p>
+            </div>
+            <div style="height: 0.5rem; background: #e2e8f0; border-radius: 999px; overflow: hidden;">
+                <div id="progress-bar"
+                    style="height: 100%; background: var(--primary); width: 25%; transition: width 0.4s ease;"></div>
+            </div>
+        </div>
+
+        <!-- Step 2: Basic Info -->
+        <div class="step" id="step-2">
+            <div
+                style="background: white; padding: 3rem; border-radius: 1.5rem; border: 1px solid #f1f5f9; box-shadow: 0 20px 40px rgba(0,0,0,0.05);">
+                <form id="form-step-2" onsubmit="event.preventDefault(); nextStep();"
+                    style="display: flex; flex-direction: column; gap: 1.5rem;">
+                    <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                        <label style="font-size: 0.875rem; font-weight: 700;"><span class="material-symbols-outlined"
+                                style="font-size: 1rem; vertical-align: middle;">badge</span> Nombre completo</label>
+                        <input type="text" id="name" required placeholder="Ej. Juan Pérez"
+                            style="padding: 1rem; border-radius: 0.75rem; border: 1px solid #e2e8f0; outline: none;">
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                        <label style="font-size: 0.875rem; font-weight: 700;"><span class="material-symbols-outlined"
+                                style="font-size: 1rem; vertical-align: middle;">mail</span> Email corporativo o
+                            personal</label>
+                        <input type="email" id="email" required placeholder="correo@ejemplo.com"
+                            style="padding: 1rem; border-radius: 0.75rem; border: 1px solid #e2e8f0; outline: none;">
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                        <label style="font-size: 0.875rem; font-weight: 700;"><span class="material-symbols-outlined"
+                                style="font-size: 1rem; vertical-align: middle;">location_on</span> Ciudad /
+                            País</label>
+                        <input type="text" id="location" required placeholder="Ej. Madrid, España"
+                            style="padding: 1rem; border-radius: 0.75rem; border: 1px solid #e2e8f0; outline: none;">
+                    </div>
+                    <div style="margin-top: 1rem; display: flex; gap: 1rem;">
+                        <button type="button" onclick="prevStep()" class="btn btn-outline"
+                            style="flex: 1; padding: 1rem; display: flex; align-items: center; justify-content: center; gap: 0.5rem;">
+                            <span class="material-symbols-outlined">arrow_back</span> Atrás
+                        </button>
+                        <button type="submit" class="btn btn-primary"
+                            style="flex: 2; padding: 1rem; display: flex; align-items: center; justify-content: center; gap: 0.5rem;">
+                            Siguiente paso <span class="material-symbols-outlined">arrow_forward</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Step 3: Qualification -->
+        <div class="step" id="step-3">
+            <div
+                style="background: white; padding: 3rem; border-radius: 1.5rem; border: 1px solid #f1f5f9; box-shadow: 0 20px 40px rgba(0,0,0,0.05);">
+                <form id="form-step-3" onsubmit="event.preventDefault(); nextStep();"
+                    style="display: flex; flex-direction: column; gap: 1.5rem;">
+                    <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                        <label style="font-size: 0.875rem; font-weight: 700;"><span class="material-symbols-outlined"
+                                style="font-size: 1rem; vertical-align: middle;">real_estate_agent</span> ¿Cuántas
+                            propiedades administras?</label>
+                        <input type="number" id="properties" required placeholder="Ej. 3"
+                            style="padding: 1rem; border-radius: 0.75rem; border: 1px solid #e2e8f0; outline: none;">
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                        <label style="font-size: 0.875rem; font-weight: 700;"><span class="material-symbols-outlined"
+                                style="font-size: 1rem; vertical-align: middle;">cloud_done</span> ¿Actualmente publicas
+                            en Airbnb?</label>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                            <label class="radio-card selected">
+                                <input type="radio" name="airbnb" value="yes" checked>
+                                <span class="material-symbols-outlined"
+                                    style="color: var(--primary);">check_circle</span> Sí
+                            </label>
+                            <label class="radio-card">
+                                <input type="radio" name="airbnb" value="no">
+                                <span class="material-symbols-outlined" style="color: #cbd5e1;">circle</span> No
+                            </label>
+                        </div>
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                        <label style="font-size: 0.875rem; font-weight: 700;"><span class="material-symbols-outlined"
+                                style="font-size: 1rem; vertical-align: middle;">payments</span> Ingreso mensual
+                            promedio (USD)</label>
+                        <input type="number" id="revenue" required placeholder="Ej. 2500"
+                            style="padding: 1rem; border-radius: 0.75rem; border: 1px solid #e2e8f0; outline: none;">
+                    </div>
+                    <div style="margin-top: 1rem; display: flex; gap: 1rem;">
+                        <button type="button" onclick="prevStep()" class="btn btn-outline"
+                            style="flex: 1; padding: 1rem; display: flex; align-items: center; justify-content: center; gap: 0.5rem;">
+                            <span class="material-symbols-outlined">arrow_back</span> Atrás
+                        </button>
+                        <button type="submit" class="btn btn-primary"
+                            style="flex: 2; padding: 1rem; display: flex; align-items: center; justify-content: center; gap: 0.5rem;">
+                            Siguiente paso <span class="material-symbols-outlined">arrow_forward</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Step 4: Commitment -->
+        <div class="step" id="step-4">
+            <div
+                style="background: white; padding: 3rem; border-radius: 1.5rem; border: 1px solid #f1f5f9; box-shadow: 0 20px 40px rgba(0,0,0,0.05);">
+                <form id="form-step-4" onsubmit="event.preventDefault(); finishApplication();"
+                    style="display: flex; flex-direction: column; gap: 1.5rem;">
+                    <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                        <label style="font-size: 0.875rem; font-weight: 700;">¿Cuál es tu principal desafío
+                            actual?</label>
+                        <textarea id="challenge" required placeholder="Describe tus obstáculos..." rows="3"
+                            style="padding: 1rem; border-radius: 0.75rem; border: 1px solid #e2e8f0; outline: none; resize: none;"></textarea>
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                        <label style="font-size: 0.875rem; font-weight: 700;">¿Cuál es tu objetivo en los próximos 3
+                            meses?</label>
+                        <input type="text" id="goal" required placeholder="Ej: Escalar a 10 propiedades"
+                            style="padding: 1rem; border-radius: 0.75rem; border: 1px solid #e2e8f0; outline: none;">
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                        <label style="font-size: 0.875rem; font-weight: 700;">¿Estás dispuesto a implementar cambios
+                            estratégicos?</label>
+                        <div style="grid-template-columns: 1fr 1fr; display: grid; gap: 1rem;">
+                            <label class="radio-card selected">
+                                <input type="radio" name="commitment" value="yes" checked>
+                                <span class="material-symbols-outlined"
+                                    style="color: var(--emerald);">check_circle</span> Sí, estoy listo
+                            </label>
+                            <label class="radio-card">
+                                <input type="radio" name="commitment" value="maybe">
+                                <span class="material-symbols-outlined" style="color: #cbd5e1;">help</span> Aún no lo sé
+                            </label>
+                        </div>
+                    </div>
+                    <div style="margin-top: 1rem; display: flex; gap: 1rem;">
+                        <button type="button" onclick="prevStep()" class="btn btn-outline"
+                            style="flex: 1; padding: 1rem; display: flex; align-items: center; justify-content: center; gap: 0.5rem;">
+                            <span class="material-symbols-outlined">arrow_back</span> Atrás
+                        </button>
+                        <button type="submit" class="btn btn-primary"
+                            style="flex: 2; padding: 1rem; display: flex; align-items: center; justify-content: center; gap: 0.5rem;">
+                            Finalizar aplicación <span class="material-symbols-outlined">send</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Step 5A: Qualified -->
+        <div class="step" id="step-5a">
+            <div style="text-align: center; margin-bottom: 3rem;">
+                <div
+                    style="width: 4rem; height: 4rem; background: rgba(7, 136, 59, 0.1); color: var(--emerald); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem;">
+                    <span class="material-symbols-outlined" style="font-size: 2.5rem;">check_circle</span>
+                </div>
+                <h1 style="font-size: 2.5rem; margin-bottom: 1rem;">¡Felicitaciones! Calificás para una asesoría</h1>
+                <p style="color: var(--text-slate); line-height: 1.6;">Basado en tus respuestas, tienes el perfil ideal
+                    para escalar tu negocio. Agenda tu sesión 1:1 con un experto ahora.</p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 2rem; flex-wrap: wrap;">
+                <!-- Advisor Info -->
+                <div
+                    style="background: white; padding: 2.5rem; border-radius: 1.5rem; border: 1px solid #f1f5f9; text-align: center;">
+                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEkdj1vG9h5k1ay5T_2AO0m0oepNQadjprtx9UXbCBc0D-b3atMzSX_poFPGo2YXxsYoxbx_z6oPsdW36xpc1FV2otxSwdMpAPliRHKlK0njmYSHNJ5tddTpdeZNTNO_4uBycWzZv_CTZJpkvKiW04Q404rih8GS0reuafAjQ3IMGFGC3sFhWefLunpMqBEEEWlekL4rAQFR-Bju6BtevbJyBaSv5AnMHmYYOIiGc75Nh8mFGZzrM-Qoz1H9MMqPtvrZ-lvcw3cD6L"
+                        alt="Expert"
+                        style="width: 8rem; height: 8rem; border-radius: 50%; object-fit: cover; margin-bottom: 1.5rem; border: 4px solid var(--bg-light);">
+                    <h3 style="margin-bottom: 0.25rem;">Carlos Méndez</h3>
+                    <p
+                        style="font-size: 0.75rem; font-weight: 800; text-transform: uppercase; color: #94a3b8; letter-spacing: 0.05em; margin-bottom: 1rem;">
+                        Estratega Senior BNB</p>
+
+                    <div
+                        style="border-top: 1px solid #f1f5f9; padding-top: 1.5rem; display: flex; flex-direction: column; gap: 1rem; text-align: left;">
+                        <div style="display: flex; align-items: center; gap: 0.75rem; font-size: 0.875rem;">
+                            <span class="material-symbols-outlined" style="color: var(--primary);">schedule</span>
+                            <span>45 Minutos</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 0.75rem; font-size: 0.875rem;">
+                            <span class="material-symbols-outlined" style="color: var(--primary);">videocam</span>
+                            <span>Vía Zoom</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 0.75rem; font-size: 0.875rem;">
+                            <span class="material-symbols-outlined" style="color: var(--primary);">payments</span>
+                            <span style="color: var(--emerald); font-weight: 800;">GRATIS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Calendar (Simple Mock) -->
+                <div style="background: white; border-radius: 1.5rem; border: 1px solid #f1f5f9; overflow: hidden;">
+                    <div style="padding: 1.5rem; border-bottom: 1px solid #f1f5f9;">
+                        <h4 style="margin-bottom: 0.25rem;">Selecciona Fecha y Hora</h4>
+                        <p style="font-size: 0.75rem; color: #94a3b8;">Zona horaria: Madrid, España (GMT+2)</p>
+                    </div>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr;">
+                        <!-- Mock Calendar -->
+                        <div style="padding: 1.5rem; border-right: 1px solid #f1f5f9;">
+                            <div
+                                style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                                <span style="font-weight: 800; font-size: 0.875rem;">Octubre 2024</span>
+                                <div style="display: flex; gap: 0.5rem;">
+                                    <span class="material-symbols-outlined"
+                                        style="font-size: 1.25rem; cursor: pointer;">chevron_left</span>
+                                    <span class="material-symbols-outlined"
+                                        style="font-size: 1.25rem; cursor: pointer;">chevron_right</span>
+                                </div>
+                            </div>
+                            <div class="calendar-grid"
+                                style="font-size: 0.625rem; color: #94a3b8; font-weight: 800; margin-bottom: 0.5rem;">
+                                <span>LU</span><span>MA</span><span>MI</span><span>JU</span><span>VI</span><span>SA</span><span>DO</span>
+                            </div>
+                            <div class="calendar-grid">
+                                <div class="calendar-day empty">1</div>
+                                <div class="calendar-day empty">2</div>
+                                <div class="calendar-day empty">3</div>
+                                <div class="calendar-day">4</div>
+                                <div class="calendar-day active">5</div>
+                                <div class="calendar-day">6</div>
+                                <div class="calendar-day empty">7</div>
+                                <div class="calendar-day">8</div>
+                                <div class="calendar-day">9</div>
+                                <!-- ... simplified for demo -->
+                                <div class="calendar-day">10</div>
+                                <div class="calendar-day">11</div>
+                                <div class="calendar-day">12</div>
+                            </div>
+                        </div>
+                        <!-- Mock Time Slots -->
+                        <div style="padding: 1.5rem; max-height: 300px; overflow-y: auto;">
+                            <p style="font-weight: 800; font-size: 0.875rem; margin-bottom: 1rem;">Jueves, 5 de Oct</p>
+                            <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                                <button class="time-slot">09:00 AM</button>
+                                <button class="time-slot selected">10:30 AM</button>
+                                <button class="time-slot">11:15 AM</button>
+                                <button class="time-slot">14:00 PM</button>
+                                <button class="time-slot">16:30 PM</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="padding: 1.5rem; background: var(--bg-light); border-top: 1px solid #f1f5f9;">
+                        <button class="btn btn-primary" style="width: 100%;"
+                            onclick="alert('Consulta agendada!')">Confirmar Agendamiento</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 5B: In Review -->
+        <div class="step" id="step-5b">
+            <div style="text-align: center; margin-bottom: 3rem;">
+                <div
+                    style="width: 4rem; height: 4rem; background: rgba(11, 32, 60, 0.05); color: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem;">
+                    <span class="material-symbols-outlined" style="font-size: 2.5rem;">schedule</span>
+                </div>
+                <h1 style="font-size: 2.5rem; margin-bottom: 1rem;">Estamos evaluando tu caso</h1>
+                <p style="color: var(--text-slate); line-height: 1.6; max-width: 600px; margin: 0 auto;">Nuestro equipo
+                    revisará tu información para determinar la mejor estrategia. Recibirás una respuesta en un plazo de
+                    24-48 horas.</p>
+            </div>
+
+            <!-- Resource Card -->
+            <div
+                style="background: white; border-radius: 1.5rem; border: 1px solid #f1f5f9; padding: 3rem; display: flex; gap: 3rem; align-items: center; box-shadow: 0 20px 40px rgba(0,0,0,0.05); flex-wrap: wrap;">
+                <div style="flex: 1; min-width: 250px;">
+                    <p
+                        style="font-size: 0.75rem; font-weight: 800; text-transform: uppercase; color: var(--primary); letter-spacing: 0.1em; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
+                        <span class="material-symbols-outlined" style="font-size: 1rem;">auto_awesome</span> Recurso
+                        Gratuito
+                    </p>
+                    <h3 style="margin-bottom: 1rem;">Guía de Optimización para Anfitriones (PDF)</h3>
+                    <p style="color: var(--text-slate); font-size: 0.875rem; margin-bottom: 2rem;">Mientras revisamos tu
+                        caso, descarga esta guía con las mejores prácticas para mejorar el posicionamiento de tu
+                        propiedad.</p>
+                    <a href="#" class="btn btn-primary"
+                        style="display: flex; align-items: center; gap: 0.5rem; width: fit-content; padding: 1rem 2rem;">
+                        <span class="material-symbols-outlined">download</span> Descargar guía gratuita
+                    </a>
+                </div>
+                <div style="flex: 0 0 200px;">
+                    <div
+                        style="width: 100%; aspect-ratio: 4/5; background: #f1f5f9; border-radius: 1rem; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; border: 1px solid #e2e8f0;">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDANNXWI4uYlW2vaBjJl4FAnzwz4a5O2AlyYBQAprScUe4FHdteFv64P-Dtqr0Al-hVWpTgIufIHlVcKdCwGNK5BsN0qsNRcRr47Be3TgCfUR3h8ZvCwL2IwEjcgV1t67bejKK2R_CmUlYsKObSpbiBB1asDWfGqNzJ_-RoQ78wW89lCgaAB6dZh-lV97WMqqkCnpSztGY5NVHJHZ29tq2egVyo7fM7vvtfdvGGIyUvvivgh-AyP2RY8_af1dyIc0sgK1jAK88lMUmz"
+                            alt="Guide Cover" style="width: 100%; height: 100%; object-fit: cover;">
+                        <div
+                            style="position: absolute; inset: 0; background: rgba(11, 32, 60, 0.1); display: flex; align-items: center; justify-content: center;">
+                            <span class="material-symbols-outlined"
+                                style="font-size: 3rem; color: white;">picture_as_pdf</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 4rem;">
+                <p style="color: #94a3b8; font-size: 0.875rem; margin-bottom: 1.5rem;">¿Deseas volver a explorar nuestra
+                    plataforma?</p>
+                <a href="index.html"
+                    style="color: var(--primary); font-weight: 800; display: flex; align-items: center; justify-content: center; gap: 0.5rem;">
+                    <span class="material-symbols-outlined" style="font-size: 1rem;">arrow_back</span> Volver al inicio
+                </a>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="agenda.js"></script>
+</body>
+
+</html>
