@@ -5,7 +5,7 @@ class SiteHeader extends HTMLElement {
             <nav class="navbar">
                 <div class="container">
                     <div class="logo" style="display: flex; align-items: center; height: 100%;">
-                        <a href="index.html" style="display: flex; align-items: center;">
+                        <a href="index.html#hero-section" style="display: flex; align-items: center;">
                             <img src="favicon.png" alt="Mundo BNB" style="height: 50px; object-fit: contain; mix-blend-mode: multiply;">
                         </a>
                     </div>
@@ -18,14 +18,14 @@ class SiteHeader extends HTMLElement {
                     </ul>
                     <div class="nav-actions">
                         <!-- <a href="login.html" class="nav-link" style="font-weight: 700;">Login</a> -->
-                        <a href="agenda.html" class="btn btn-primary">Inicia tu Aplicación</a>
+                        <a href="agenda.html" class="btn btn-primary btn-header-nav">Inicia tu Aplicación</a>
                     </div>
                 </div>
             </nav>
 
             <!-- Bottom Navigation Bar for Mobile viewports -->
             <div class="bottom-nav">
-                <a href="index.html" class="bottom-nav-item ${activePage === 'inicio' ? 'active' : ''}">
+                <a href="index.html#hero-section" class="bottom-nav-item ${activePage === 'inicio' ? 'active' : ''}">
                     <span class="material-symbols-outlined">home</span>
                     <span>Inicio</span>
                 </a>

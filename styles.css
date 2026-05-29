@@ -96,6 +96,27 @@ ul {
     gap: 1.5rem;
 }
 
+/* Header Navbar specific button */
+.navbar .btn-header-nav, .btn-header-nav {
+    min-height: 38px !important;
+    height: 38px !important;
+    padding: 0.5rem 1.25rem !important;
+    font-size: 0.85rem !important;
+    font-weight: 700 !important;
+    border-radius: 999px !important;
+    width: auto !important;
+    max-width: none !important;
+    white-space: nowrap !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: 0 !important;
+    background-color: var(--primary) !important;
+    color: var(--white) !important;
+    box-shadow: none !important;
+}
+
+
 .btn {
     padding: 0.75rem 1.5rem;
     border-radius: var(--border-radius);
@@ -404,4 +425,354 @@ input, select, textarea {
         order: 2;
     }
 }
+
+/* Hide absolute text tooltips/overlays on mobile devices */
+@media (max-width: 768px) {
+    .custom-tooltip {
+        display: none !important;
+    }
+}
+
+/* ==========================================================================
+   Responsive Overrides for Hero, Bento, Why-Us, and CTA Final
+   ========================================================================== */
+
+@media (max-width: 768px) {
+    /* --- HERO & BENTO SECTION --- */
+    .hero {
+        padding: 3rem 0 !important;
+        overflow: hidden !important;
+    }
+    .hero-grid-layout {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 2rem !important;
+        text-align: center !important;
+        padding-top: 1.5rem !important;
+    }
+    .hero-content {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        width: 100% !important;
+        transform: none !important;
+    }
+    .hero-content h1 {
+        font-size: clamp(2rem, 8vw, 2.75rem) !important;
+        line-height: 1.2 !important;
+        margin-bottom: 1rem !important;
+        color: #0A192F !important;
+        display: block !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+    .hero-content p {
+        font-size: 1rem !important;
+        line-height: 1.5 !important;
+        margin: 0 auto 1.5rem auto !important;
+        color: var(--text-slate) !important;
+        max-width: 100% !important;
+        text-align: center !important;
+    }
+    .hero-content .stagger-btns {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 0.75rem !important;
+        width: 100% !important;
+        align-items: center !important;
+    }
+    .hero-content .stagger-btns .btn {
+        width: 100% !important;
+        max-width: 320px !important;
+        padding: 0.875rem 1.5rem !important;
+        font-size: 1rem !important;
+        margin: 0 auto !important;
+    }
+    .bento-container {
+        width: 100% !important;
+        max-width: 480px !important;
+        margin: 0 auto !important;
+    }
+    .bento-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 1.5rem !important;
+        height: auto !important;
+        width: 100% !important;
+        transform: none !important;
+    }
+    .bento-main {
+        display: flex !important;
+        flex-direction: column !important;
+        height: auto !important;
+        width: 100% !important;
+        gap: 0.75rem !important;
+    }
+    .gallery-main-view {
+        width: 100% !important;
+        height: 240px !important;
+        position: relative !important;
+        border-radius: 20px !important;
+        overflow: hidden !important;
+    }
+    .gallery-main-view img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+    }
+    .gallery-thumbnails {
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: center !important;
+        gap: 0.5rem !important;
+        width: 100% !important;
+    }
+    .thumbnail-btn {
+        width: 50px !important;
+        height: 50px !important;
+        border-radius: 8px !important;
+    }
+    .bento-roi, .bento-proof {
+        width: 100% !important;
+        height: auto !important;
+        min-height: auto !important;
+        padding: 1.5rem !important;
+        border-radius: 20px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
+        box-shadow: 0 10px 30px rgba(10, 25, 47, 0.05) !important;
+    }
+    .bento-roi p, .bento-roi h3, .bento-proof h4 {
+        text-align: center !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+    .roi-chart {
+        width: 100% !important;
+        max-width: 180px !important;
+        margin: 1rem auto 0 auto !important;
+    }
+    .bento-proof .stars {
+        justify-content: center !important;
+        margin-bottom: 0.5rem !important;
+    }
+    /* Stagger resets */
+    .stagger-text, .stagger-btns, .stagger-bento, .stagger-stat-1, .stagger-stat-2, .stagger-stat-3, .stagger-stat-4 {
+        opacity: 1 !important;
+        animation: none !important;
+        transform: none !important;
+    }
+
+    /* --- WHY US (CARACTERÍSTICAS) SECTION --- */
+    .why-us {
+        padding: 4rem 0 !important;
+    }
+    .why-us .container {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 2rem !important;
+        text-align: center !important;
+        width: 100% !important;
+        padding: 0 1.25rem !important;
+    }
+    .benefits-visuals {
+        height: auto !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        width: 100% !important;
+        max-width: 400px !important;
+        margin: 0 auto 1.5rem auto !important;
+        position: relative !important;
+        gap: 0.75rem !important;
+    }
+    /* Container of the two images superposed */
+    .benefits-img-wrapper {
+        position: relative !important;
+        width: 100% !important;
+        height: 280px !important;
+        display: block !important;
+    }
+    .benefits-img-wrapper img.img-base {
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 85% !important;
+        height: 85% !important;
+        object-fit: cover !important;
+        border-radius: 20px !important;
+        z-index: 1 !important;
+        box-shadow: 0 10px 25px rgba(10, 25, 47, 0.05) !important;
+    }
+    .benefits-img-wrapper img.img-overlay {
+        position: absolute !important;
+        bottom: 0 !important;
+        right: 0 !important;
+        width: 55% !important;
+        height: 55% !important;
+        object-fit: cover !important;
+        border-radius: 12px !important;
+        border: 4px solid #F8F9FA !important;
+        z-index: 2 !important;
+        box-shadow: 0 15px 30px rgba(10, 25, 47, 0.1) !important;
+        display: block !important;
+    }
+    /* Superhost chip badge */
+    .benefits-visuals .superhost-badge {
+        position: relative !important;
+        top: auto !important;
+        right: auto !important;
+        margin: 0 0 0.5rem 0 !important;
+        transform: none !important;
+        animation: none !important;
+        display: inline-flex !important;
+        background: rgba(255, 255, 255, 0.9) !important;
+        backdrop-filter: blur(12px) !important;
+        -webkit-backdrop-filter: blur(12px) !important;
+        border: 1px solid rgba(11, 32, 60, 0.1) !important;
+        border-radius: 100px !important;
+        padding: 0.5rem 1.25rem !important;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05) !important;
+        width: auto !important;
+    }
+    .benefits-visuals .superhost-badge span {
+        font-size: 0.85rem !important;
+        font-weight: 800 !important;
+        color: #0A192F !important;
+    }
+    .benefits-content {
+        text-align: center !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    .benefits-content h2 {
+        text-align: center !important;
+        margin-bottom: 1.75rem !important;
+        font-size: var(--fs-h2) !important;
+        max-width: 100% !important;
+    }
+    .benefit-cards-container {
+        width: 100% !important;
+        align-items: center !important;
+        gap: 1rem !important;
+        margin-bottom: 2rem !important;
+    }
+    .benefit-card {
+        width: 100% !important;
+        max-width: 480px !important;
+        text-align: left !important;
+        padding: 1.25rem !important;
+        margin: 0 auto !important;
+        border-radius: 16px !important;
+    }
+    .benefits-content .btn-ghost {
+        margin: 1rem auto 0 auto !important;
+        display: inline-flex !important;
+        justify-content: center !important;
+        width: auto !important;
+        max-width: 320px !important;
+    }
+
+    /* --- FINAL CTA SECTION --- */
+    .cta {
+        padding: 4rem 0 !important;
+        min-height: auto !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+    .cta-grid {
+        grid-template-columns: 1fr !important;
+        gap: 2.5rem !important;
+        text-align: center !important;
+        width: 100% !important;
+    }
+    .cta-text-content {
+        padding-right: 0 !important;
+        text-align: center !important;
+        max-width: 100% !important;
+    }
+    .cta-text-content h1 {
+        text-align: center !important;
+        font-size: clamp(2rem, 6vw, 2.5rem) !important;
+        margin-bottom: 1rem !important;
+    }
+    .cta-text-content p {
+        text-align: center !important;
+        font-size: 1rem !important;
+        margin: 0 auto !important;
+        max-width: 100% !important;
+        padding: 0 1rem !important;
+    }
+    .cta-image-box {
+        width: 100% !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        margin: 0 auto !important;
+        padding: 0 !important;
+        overflow: hidden !important;
+    }
+    /* Wrapper */
+    .cta-image-box > div {
+        margin: 0 auto !important;
+        width: 100% !important;
+        max-width: 480px !important;
+        left: auto !important;
+        right: auto !important;
+        position: relative !important;
+        display: inline-block !important;
+    }
+    /* Agrupador JP & Cartel */
+    .cta-image-box > div > div {
+        position: relative !important;
+        width: 100% !important;
+        transform: none !important;
+        margin: 0 auto !important;
+        left: auto !important;
+        right: auto !important;
+    }
+    .cta-image-box img {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        display: block !important;
+        margin: 0 auto !important;
+    }
+    .cta-html-board {
+        position: absolute !important;
+        top: 26% !important;
+        left: 53% !important;
+        width: 44% !important;
+        height: 50% !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 0.5rem !important;
+        justify-content: center !important;
+        align-items: center !important;
+        padding: 4% 3% !important;
+        z-index: 3 !important;
+    }
+    .cta-html-board .btn {
+        padding: clamp(4px, 1.5vw, 10px) clamp(8px, 2.5vw, 16px) !important;
+        font-size: clamp(0.55rem, 2vw, 0.85rem) !important;
+        width: 90% !important;
+        min-height: clamp(28px, 8vw, 40px) !important;
+        height: auto !important;
+        border-radius: 6px !important;
+        margin: 0 !important;
+    }
+}
+
 
