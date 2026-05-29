@@ -4,26 +4,51 @@ class SiteHeader extends HTMLElement {
         this.innerHTML = `
             <nav class="navbar">
                 <div class="container">
-                    <div class="logo">
-                        <a href="index.html">
-                            <img src="https://lh3.googleusercontent.com/aida/AOfcidVNqyD8PYtuTj5P4wH2S16KbO5_ghz-isCMj4TPfl3GunbkFvpeEs8vfchrpdYl7soY5HSlmYtuw76Y4l1_JIIYCybMSU8AxPAP6Pc2kgNrQXlI5o1tyKIashsERFu7cY5WdtRYLgqLEUs36geTSqmM5EZqPyFJ0yaTnyNo3N9cAvH_I_lII2HjG585xTTKM0M4sZWcFT1NBdeMi0wDjy4RSiftfqYRdioVpfLTcudiPuu-o8uB5QDxMpAj" alt="Mundo BNB" style="height: 50px;">
+                    <div class="logo" style="display: flex; align-items: center; height: 100%;">
+                        <a href="index.html" style="display: flex; align-items: center;">
+                            <img src="favicon.png" alt="Mundo BNB" style="height: 50px; object-fit: contain; mix-blend-mode: multiply;">
                         </a>
                     </div>
                     <ul class="nav-links">
-                        <li><a href="index.html" class="nav-link ${activePage === 'inicio' ? 'active' : ''}">Inicio</a></li>
                         <li><a href="servicios.html" class="nav-link ${activePage === 'servicios' ? 'active' : ''}">Servicios</a></li>
                         <li><a href="resultados.html" class="nav-link ${activePage === 'resultados' ? 'active' : ''}">Resultados</a></li>
                         <li><a href="nosotros.html" class="nav-link ${activePage === 'nosotros' ? 'active' : ''}">Nosotros</a></li>
+                        <li><a href="comunidad.html" class="nav-link ${activePage === 'comunidad' ? 'active' : ''}">Comunidad</a></li>
                         <li><a href="contacto.html" class="nav-link ${activePage === 'contacto' ? 'active' : ''}">Contacto</a></li>
                     </ul>
                     <div class="nav-actions">
-                        <a href="login.html" class="nav-link" style="font-weight: 700;">Login</a>
+                        <!-- <a href="login.html" class="nav-link" style="font-weight: 700;">Login</a> -->
                         <a href="agenda.html" class="btn btn-primary">Inicia tu Aplicación</a>
                     </div>
                 </div>
             </nav>
+
+            <!-- Bottom Navigation Bar for Mobile viewports -->
+            <div class="bottom-nav">
+                <a href="index.html" class="bottom-nav-item ${activePage === 'inicio' ? 'active' : ''}">
+                    <span class="material-symbols-outlined">home</span>
+                    <span>Inicio</span>
+                </a>
+                <a href="servicios.html" class="bottom-nav-item ${activePage === 'servicios' ? 'active' : ''}">
+                    <span class="material-symbols-outlined">room_service</span>
+                    <span>Servicios</span>
+                </a>
+                <a href="resultados.html" class="bottom-nav-item ${activePage === 'resultados' ? 'active' : ''}">
+                    <span class="material-symbols-outlined">trending_up</span>
+                    <span>Resultados</span>
+                </a>
+                <a href="comunidad.html" class="bottom-nav-item ${activePage === 'comunidad' ? 'active' : ''}">
+                    <span class="material-symbols-outlined">groups</span>
+                    <span>Comunidad</span>
+                </a>
+                <a href="contacto.html" class="bottom-nav-item ${activePage === 'contacto' ? 'active' : ''}">
+                    <span class="material-symbols-outlined">chat</span>
+                    <span>Contacto</span>
+                </a>
+            </div>
         `;
     }
 }
 
 customElements.define('site-header', SiteHeader);
+

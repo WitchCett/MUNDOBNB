@@ -14,6 +14,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
         rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css">
     <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
@@ -49,40 +50,7 @@
 </head>
 
 <body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased">
-    <!-- Header / Navigation -->
-    <header
-        class="sticky top-0 z-50 w-full border-b border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
-                <div class="flex items-center">
-                    <a href="index.html"><img alt="Mundo BNB Logo" class="h-10 w-auto object-contain"
-                            src="https://lh3.googleusercontent.com/aida/AOfcidVNqyD8PYtuTj5P4wH2S16KbO5_ghz-isCMj4TPfl3GunbkFvpeEs8vfchrpdYl7soY5HSlmYtuw76Y4l1_JIIYCybMSU8AxPAP6Pc2kgNrQXlI5o1tyKIashsERFu7cY5WdtRYLgqLEUs36geTSqmM5EZqPyFJ0yaTnyNo3N9cAvH_I_lII2HjG585xTTKM0M4sZWcFT1NBdeMi0wDjy4RSiftfqYRdioVpfLTcudiPuu-o8uB5QDxMpAj" /></a>
-                </div>
-                <nav class="hidden md:flex items-center gap-8">
-                    <a class="text-sm font-semibold hover:text-primary transition-colors" href="index.html">Inicio</a>
-                    <a class="text-sm font-semibold hover:text-primary transition-colors"
-                        href="servicios.html">Servicios</a>
-                    <a class="text-sm font-semibold hover:text-primary transition-colors"
-                        href="resultados.html">Resultados</a>
-                    <a class="text-sm font-semibold hover:text-primary transition-colors"
-                        href="nosotros.html">Nosotros</a>
-                    <a class="text-sm font-semibold text-primary border-b-2 border-primary"
-                        href="equipo.html">Equipo</a>
-                    <a class="text-sm font-semibold hover:text-primary transition-colors"
-                        href="contacto.html">Contacto</a>
-                </nav>
-                <div class="flex items-center gap-4">
-                    <a href="contacto.html"
-                        class="hidden sm:flex bg-primary text-white px-6 py-2.5 rounded-lg text-sm font-bold tracking-wide hover:bg-primary/90 transition-all">
-                        Contáctanos
-                    </a>
-                    <button class="md:hidden text-primary">
-                        <span class="material-symbols-outlined">menu</span>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </header>
+    <site-header active="nosotros"></site-header>
     <main>
         <!-- Hero Section -->
         <section class="relative py-20 overflow-hidden">
@@ -304,63 +272,10 @@
             </div>
         </section>
     </main>
-    <!-- Footer -->
-    <footer class="bg-primary text-white py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 border-b border-white/10 pb-12 mb-12">
-                <div class="col-span-1 md:col-span-1">
-                    <div class="flex items-center mb-6">
-                        <a href="index.html">
-                            <img alt="Mundo BNB" class="h-12 w-auto object-contain brightness-0 invert"
-                                src="https://lh3.googleusercontent.com/aida/AOfcidVNqyD8PYtuTj5P4wH2S16KbO5_ghz-isCMj4TPfl3GunbkFvpeEs8vfchrpdYl7soY5HSlmYtuw76Y4l1_JIIYCybMSU8AxPAP6Pc2kgNrQXlI5o1tyKIashsERFu7cY5WdtRYLgqLEUs36geTSqmM5EZqPyFJ0yaTnyNo3N9cAvH_I_lII2HjG585xTTKM0M4sZWcFT1NBdeMi0wDjy4RSiftfqYRdioVpfLTcudiPuu-o8uB5QDxMpAj" />
-                        </a>
-                    </div>
-                    <p class="text-white/60 text-sm leading-relaxed">
-                        Liderando la industria de alquiler temporal con estrategias basadas en datos y excelencia
-                        operativa.
-                    </p>
-                </div>
-                <div>
-                    <h4 class="font-bold mb-6 text-sm uppercase tracking-widest">Empresa</h4>
-                    <ul class="space-y-4 text-sm text-white/60">
-                        <li><a class="hover:text-white transition-colors" href="nosotros.html">Sobre Nosotros</a></li>
-                        <li><a class="hover:text-white transition-colors" href="equipo.html">Nuestro Equipo</a></li>
-                        <li><a class="hover:text-white transition-colors" href="resultados.html">Casos de Éxito</a></li>
-                        <li><a class="hover:text-white transition-colors" href="#">Blog</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-bold mb-6 text-sm uppercase tracking-widest">Servicios</h4>
-                    <ul class="space-y-4 text-sm text-white/60">
-                        <li><a class="hover:text-white transition-colors" href="servicios.html">Optimización de
-                                Perfiles</a></li>
-                        <li><a class="hover:text-white transition-colors" href="servicios.html">Revenue Management</a>
-                        </li>
-                        <li><a class="hover:text-white transition-colors" href="servicios.html">Gestión de Huéspedes</a>
-                        </li>
-                        <li><a class="hover:text-white transition-colors" href="servicios.html">Mantenimiento
-                                Premium</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-bold mb-6 text-sm uppercase tracking-widest">Legal</h4>
-                    <ul class="space-y-4 text-sm text-white/60">
-                        <li><a class="hover:text-white transition-colors" href="#">Privacidad</a></li>
-                        <li><a class="hover:text-white transition-colors" href="#">Términos</a></li>
-                        <li><a class="hover:text-white transition-colors" href="#">Cookies</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="flex flex-col md:flex-row justify-between items-center gap-6 text-xs text-white/40">
-                <p>© 2024 Mundo BNB. Todos los derechos reservados. Expertos en Gestión Temporal.</p>
-                <div class="flex gap-6">
-                    <a class="hover:text-white transition-colors" href="#">LinkedIn</a>
-                    <a class="hover:text-white transition-colors" href="#">Instagram</a>
-                    <a class="hover:text-white transition-colors" href="#">Facebook</a>
-                </div>
-            </div>
-        </div>
-    </footer>
-</body>
 
+    <site-footer></site-footer>
+
+    <script src="components/header.js"></script>
+    <script src="components/footer.js"></script>
+</body>
 </html>

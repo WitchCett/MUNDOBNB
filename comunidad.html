@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comunidad | Mundo BNB - Aprende con Nosotros</title>
+    <!-- Favicon & Home Icon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="favicon.png">
+
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .hero-comunidad {
+            padding: 5rem 0 3rem 0;
+            background: linear-gradient(135deg, rgba(10, 25, 47, 0.05) 0%, rgba(0, 85, 255, 0.05) 100%);
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 3rem auto;
+        }
+
+        .section-title {
+            font-size: clamp(2rem, 4vw, 2.75rem);
+            margin-bottom: 1rem;
+            color: #0A192F;
+            font-weight: 800;
+        }
+
+        .section-subtitle {
+            color: var(--text-slate);
+            font-size: 1.125rem;
+            font-weight: 500;
+        }
+
+        .spotify-container {
+            max-width: 1024px;
+            margin: 0 auto;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px -10px rgba(10, 25, 47, 0.1);
+            background: #121212;
+        }
+    </style>
+</head>
+
+<body class="bg-background-light">
+    <site-header active="comunidad"></site-header>
+
+    <main>
+        <!-- Hero Section Comunidad -->
+        <section class="hero-comunidad">
+            <div class="container" style="text-align: center;">
+                <h1
+                    style="font-size: clamp(2.5rem, 5vw, 4rem); margin-bottom: 1.5rem; line-height: 1.1; color: #0A192F; font-weight: 800;">
+                    Nuestra <span style="color: #0055FF;">Comunidad</span>
+                </h1>
+                <p
+                    style="font-size: 1.125rem; color: var(--text-slate); line-height: 1.6; max-width: 700px; margin: 0 auto;">
+                    Únete a la conversación. Descubre los mejores consejos, estrategias y casos reales de anfitriones
+                    élite a través de nuestros canales oficiales de YouTube, Spotify y Facebook.
+                </p>
+            </div>
+        </section>
+
+        <!-- YouTube Videos Section -->
+        <section class="youtube-videos"
+            style="padding: 4rem 0; background-color: transparent; border-bottom: 1px solid rgba(11, 32, 60, 0.05);">
+            <div class="container" style="max-width: 1000px; margin: 0 auto;">
+
+                <div class="section-header">
+                    <h2 class="section-title">
+                        Aprende con nosotros en <span
+                            style="color: #FF0000; display: inline-flex; align-items: center; gap: 0.5rem;"><svg
+                                height="32" viewBox="0 0 24 24" width="32" fill="currentColor"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.5 12 3.5 12 3.5s-7.505 0-9.377.55a3.016 3.016 0 0 0-2.122 2.136C.001 8.08.001 12 .001 12s0 3.92.5 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.55 9.377.55 9.377.55s7.505 0 9.377-.55a3.016 3.016 0 0 0 2.122-2.136C23.999 15.92 23.999 12 23.999 12s0-3.92-.501-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                            </svg> YouTube</span>
+                    </h2>
+                    <p class="section-subtitle">Casos prácticos y guías visuales sobre gestión vacacional.</p>
+                </div>
+
+                <div class="youtube-carousel-container" style="max-width: 1024px; margin: 0 auto;">
+                    <!-- Reproductor Principal -->
+                    <div class="video-wrapper"
+                        style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 16px; box-shadow: 0 20px 40px -10px rgba(10, 25, 47, 0.15); background-color: #000; margin-bottom: 1.5rem;">
+                        <iframe id="main-youtube-video"
+                            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;" src=""
+                            title="Mundo BNB YouTube Video"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                    </div>
+
+                    <!-- Carrusel de Miniaturas -->
+                    <div class="carousel-navigation" style="display: flex; align-items: center; gap: 1rem;">
+                        <button id="yt-prev-btn" class="carousel-btn" aria-label="Anterior"
+                            style="background: white; border: 1px solid #e2e8f0; border-radius: 50%; width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 4px 6px rgba(0,0,0,0.05); flex-shrink: 0; transition: all 0.3s ease; color: #0A192F;">
+                            <span class="material-symbols-outlined">chevron_left</span>
+                        </button>
+
+                        <div id="yt-thumbnails-track"
+                            style="display: flex; gap: 1rem; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; -ms-overflow-style: none; padding: 0.5rem 0; flex-grow: 1; scroll-behavior: smooth;">
+                            <!-- Las miniaturas se insertan por JS -->
+                        </div>
+
+                        <button id="yt-next-btn" class="carousel-btn" aria-label="Siguiente"
+                            style="background: white; border: 1px solid #e2e8f0; border-radius: 50%; width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 4px 6px rgba(0,0,0,0.05); flex-shrink: 0; transition: all 0.3s ease; color: #0A192F;">
+                            <span class="material-symbols-outlined">chevron_right</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div style="margin-top: 3rem; text-align: center;">
+                    <a href="https://www.youtube.com/@MundoBNB" target="_blank" class="btn btn-outline"
+                        style="border-color: #FF0000; color: #a00000;">
+                        Suscríbete al canal
+                        <span class="material-symbols-outlined" style="font-size: 1.25rem;">open_in_new</span>
+                    </a>
+                </div>
+            </div>
+
+            <style>
+                #yt-thumbnails-track::-webkit-scrollbar {
+                    display: none;
+                }
+
+                .yt-thumbnail-item {
+                    flex: 0 0 160px;
+                    height: 90px;
+                    border-radius: 8px;
+                    overflow: hidden;
+                    cursor: pointer;
+                    border: 2px solid transparent;
+                    opacity: 0.6;
+                    transition: all 0.3s ease;
+                    scroll-snap-align: center;
+                    position: relative;
+                    background-color: #0A192F;
+                }
+
+                .yt-thumbnail-item:hover {
+                    opacity: 1;
+                    transform: translateY(-2px);
+                }
+
+                .yt-thumbnail-item.active {
+                    opacity: 1;
+                    border-color: #FF0000;
+                }
+
+                .yt-thumbnail-item img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    opacity: 0.8;
+                    transition: opacity 0.3s ease;
+                }
+
+                .yt-thumbnail-item:hover img,
+                .yt-thumbnail-item.active img {
+                    opacity: 1;
+                }
+
+                .yt-thumbnail-item .play-icon {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    color: white;
+                    opacity: 0;
+                    transition: opacity 0.3s ease;
+                    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
+                }
+
+                .yt-thumbnail-item:hover .play-icon,
+                .yt-thumbnail-item.active .play-icon {
+                    opacity: 1;
+                }
+
+                .carousel-btn:hover {
+                    background: #F8F9FA !important;
+                    transform: scale(1.05);
+                }
+
+                @media (max-width: 768px) {
+                    .yt-thumbnail-item {
+                        flex: 0 0 120px;
+                        height: 68px;
+                    }
+
+                    #yt-prev-btn,
+                    #yt-next-btn {
+                        display: none !important;
+                    }
+                }
+            </style>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', () => {
+                    const videoIds = [
+                        'mpD-INjpAm0',
+                        'ttu8WjrJCzA',
+                        '1_fdPak3arI',
+                        'E_hoBXNGMFM',
+                        'wVfiogIHoR0',
+                        '62b7gG6vJfQ',
+                        'nLEhDWJSgjM',
+                        'kwki9noZJYc',
+                        'Oq7mjAzNSHc'
+                    ];
+
+                    const iframe = document.getElementById('main-youtube-video');
+                    const track = document.getElementById('yt-thumbnails-track');
+                    const prevBtn = document.getElementById('yt-prev-btn');
+                    const nextBtn = document.getElementById('yt-next-btn');
+
+                    function loadVideo(id, index, autoplay = false) {
+                        iframe.src = `https://www.youtube.com/embed/${id}?rel=0${autoplay ? '&autoplay=1' : ''}`;
+
+                        const items = document.querySelectorAll('.yt-thumbnail-item');
+                        items.forEach(item => {
+                            if (item.dataset.id === id) {
+                                item.classList.add('active');
+                            } else {
+                                item.classList.remove('active');
+                            }
+                        });
+
+                        if (items[index]) {
+                            items[index].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+                        }
+                    }
+
+                    videoIds.forEach((id, index) => {
+                        const div = document.createElement('div');
+                        div.className = 'yt-thumbnail-item';
+                        div.dataset.id = id;
+
+                        div.innerHTML = `
+                            <img src="https://img.youtube.com/vi/${id}/mqdefault.jpg" alt="Video Thumbnail">
+                            <span class="material-symbols-outlined play-icon" style="font-size: 2rem;">play_circle</span>
+                        `;
+
+                        div.addEventListener('click', () => {
+                            loadVideo(id, index, true);
+                        });
+
+                        track.appendChild(div);
+                    });
+
+                    setTimeout(() => loadVideo(videoIds[0], 0, false), 100);
+
+                    const scrollAmount = 350;
+                    prevBtn.addEventListener('click', () => {
+                        track.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+                    });
+
+                    nextBtn.addEventListener('click', () => {
+                        track.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+                    });
+                });
+            </script>
+        </section>
+
+        <!-- Spotify Podcast Section -->
+        <section class="spotify-section" style="padding: 5rem 0; background-color: #F8F9FA;">
+            <div class="container" style="max-width: 1000px; margin: 0 auto;">
+
+                <div class="section-header">
+                    <h2 class="section-title">
+                        Escúchanos en <span
+                            style="color: #1DB954; display: inline-flex; align-items: center; gap: 0.5rem;"><svg
+                                height="32" viewBox="0 0 24 24" width="32" fill="currentColor"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.84.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.6.18-1.2.72-1.38 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.56.3z" />
+                            </svg> Spotify</span>
+                    </h2>
+                    <p class="section-subtitle">Reproduce nuestros últimos episodios directamente desde aquí.</p>
+                </div>
+
+                <div class="spotify-container" style="width: 100%; max-width: 1024px; margin: 0 auto;">
+                    <!-- Reproductor Spotify Estándar (Show Completo con Lista Deslizable) -->
+                    <iframe style="border-radius:12px;"
+                        src="https://open.spotify.com/embed/show/6qiTGIQOFe7ioG5GATgRva?utm_source=generator"
+                        width="100%" height="352" frameBorder="0" allowfullscreen=""
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                        loading="lazy"></iframe>
+                </div>
+
+                <div style="margin-top: 3rem; text-align: center;">
+                    <a href="https://open.spotify.com/show/6qiTGIQOFe7ioG5GATgRva" target="_blank"
+                        class="btn btn-outline" style="border-color: #1DB954; color: #1DB954;">
+                        Seguir en Spotify
+                        <span class="material-symbols-outlined" style="font-size: 1.25rem;">open_in_new</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!-- Facebook Section -->
+        <!-- Facebook Section -->
+        <section class="facebook-section" style="padding: 5rem 0; background-color: transparent; overflow: hidden;">
+            <div class="container" style="max-width: 1200px; margin: 0 auto; text-align: center;">
+
+                <div class="section-header">
+                    <h2 class="section-title">
+                        Únete a nuestra comunidad en <span
+                            style="color: #1877F2; display: inline-flex; align-items: center; gap: 0.5rem;"><svg
+                                height="32" viewBox="0 0 24 24" width="32" fill="currentColor"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.469h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.469h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                            </svg> Facebook</span>
+                    </h2>
+                    <p class="section-subtitle" style="max-width: 700px; margin: 0 auto;">Sigue nuestra página oficial y
+                        únete a nuestro grupo exclusivo de anfitriones para compartir estrategias y mantenerte al día.
+                    </p>
+                </div>
+
+                <div style="display: flex; gap: 1rem; justify-content: center; margin-bottom: 4rem; flex-wrap: wrap;">
+                    <a href="https://www.facebook.com/mundobnb" target="_blank" class="btn btn-outline"
+                        style="border-color: #1877F2; color: #1877F2;">
+                        Sigue nuestra Página
+                        <span class="material-symbols-outlined" style="font-size: 1.25rem;">thumb_up</span>
+                    </a>
+                    <a href="https://www.facebook.com/groups/tipsmundobnb/" target="_blank" class="btn btn-primary"
+                        style="background-color: #1877F2; border-color: #1877F2;">
+                        Únete al Grupo Privado
+                        <span class="material-symbols-outlined" style="font-size: 1.25rem;">groups</span>
+                    </a>
+                </div>
+
+                <!-- Facebook Posts Carousel -->
+                <div class="fb-carousel-wrapper"
+                    style="position: relative; width: 100%; overflow: hidden; padding: 1rem 0; mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent); -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);">
+                    <div class="fb-carousel-track" id="fb-carousel-track"
+                        style="display: flex; gap: 2rem; width: max-content;">
+                        <!-- Las tarjetas se inyectarán por JS para clonado infinito -->
+                    </div>
+                </div>
+            </div>
+
+            <style>
+                .fb-post-card {
+                    background: #fff;
+                    border-radius: 12px;
+                    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+                    width: 350px;
+                    padding: 1.5rem;
+                    flex-shrink: 0;
+                    border: 1px solid #e2e8f0;
+                    text-align: left;
+                }
+
+                .fb-post-header {
+                    display: flex;
+                    align-items: center;
+                    gap: 0.75rem;
+                    margin-bottom: 1rem;
+                }
+
+                .fb-avatar {
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    background-color: #e2e8f0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: #64748b;
+                    font-weight: bold;
+                    font-size: 1.2rem;
+                }
+
+                .fb-author-info {
+                    display: flex;
+                    flex-direction: column;
+                }
+
+                .fb-author-name {
+                    font-weight: 700;
+                    color: #0A192F;
+                    font-size: 0.95rem;
+                }
+
+                .fb-post-time {
+                    color: #64748b;
+                    font-size: 0.8rem;
+                    display: flex;
+                    align-items: center;
+                    gap: 4px;
+                }
+
+                .fb-post-content {
+                    color: #334155;
+                    font-size: 0.95rem;
+                    line-height: 1.5;
+                    margin-bottom: 1rem;
+                    min-height: 80px;
+                }
+
+                .fb-post-interactions {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding-top: 1rem;
+                    border-top: 1px solid #e2e8f0;
+                    color: #64748b;
+                    font-size: 0.85rem;
+                }
+
+                .fb-reactions {
+                    display: flex;
+                    align-items: center;
+                    gap: 0.25rem;
+                }
+
+                .fb-reaction-icon {
+                    width: 18px;
+                    height: 18px;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: #fff;
+                    font-size: 10px;
+                }
+
+                .fb-reaction-like {
+                    background: #1877F2;
+                }
+
+                .fb-reaction-heart {
+                    background: #F91880;
+                }
+
+                @keyframes scrollFacebook {
+                    0% {
+                        transform: translateX(0);
+                    }
+
+                    100% {
+                        transform: translateX(calc(-50% - 1rem));
+                    }
+                }
+
+                .fb-carousel-track {
+                    animation: scrollFacebook 30s linear infinite;
+                }
+
+                .fb-carousel-track:hover {
+                    animation-play-state: paused;
+                }
+
+                @media (max-width: 768px) {
+                    .fb-post-card {
+                        width: 300px;
+                    }
+                }
+            </style>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', () => {
+                    const fbPosts = [
+                        {
+                            initial: 'M', color: '#0284c7', bg: '#e0f2fe',
+                            name: 'Matias Scantamburlo', time: 'Hace 3 días',
+                            content: 'Hola gente! Consulta: a los que usan PriceLabs, sienten que los findes les tira el precio demasiado bajo a pesar de tener ocupación alta en la zona? Estoy pensando en ajustar el perfil base.',
+                            likes: 34, comments: 12
+                        },
+                        {
+                            initial: 'V', color: '#16a34a', bg: '#dcfce7',
+                            name: 'Valentina Rossi', time: 'Ayer a las 18:45',
+                            content: 'Les dejo un tip que me funcionó bárbaro: puse una pava eléctrica, saquitos de té y un frasquito de café molido de cortesía. Me costó nada y las ultimas 3 reseñas me mencionaron ese "detalle". Son esas boludeces las que suman puntos! ☕✨',
+                            likes: 112, comments: 28
+                        },
+                        {
+                            initial: 'G', color: '#9333ea', bg: '#f3e8ff',
+                            name: 'Gastón Silva', time: 'Hace 1 semana',
+                            content: 'Gente, me acaban de cancelar una reserva no reembolsable de 15 días (entran mañana). Ya me cobré el total, pero la duda es: ¿Les devuelvo algo por buena onda o me apego a la política estricta? El motivo dice "cambio de planes de viaje".',
+                            likes: 56, comments: 45
+                        },
+                        {
+                            initial: 'L', color: '#ea580c', bg: '#ffedd5',
+                            name: 'Lucila Mendez', time: 'Ayer a las 09:15',
+                            content: 'Buen día!! Alguien de CABA sabe si están molestando mucho los consorcios con el tema del registro de turismo? Mi edificio de repente se puso picante con el tema de los alquileres temporarios y me quieren cobrar expensas extra. 🏢👀',
+                            likes: 88, comments: 64
+                        },
+                        {
+                            initial: 'E', color: '#e11d48', bg: '#ffe4e6',
+                            name: 'Emilio Fernández', time: 'Hace 5 horas',
+                            content: 'Harto de Booking y sus tarjetas inválidas. Me pasé al cobro 100% por adelantado por transferencia y me re bajaron las reservas, pero duermo tranquilo. Alguien más en la misma?',
+                            likes: 145, comments: 92
+                        }
+                    ];
+
+                    const track = document.getElementById('fb-carousel-track');
+                    if (track) {
+                        let html = '';
+                        fbPosts.forEach(post => {
+                            html += `
+                            <div class="fb-post-card">
+                                <div class="fb-post-header">
+                                    <div class="fb-avatar" style="background:${post.bg}; color:${post.color};">${post.initial}</div>
+                                    <div class="fb-author-info">
+                                        <span class="fb-author-name">${post.name}</span>
+                                        <span class="fb-post-time">${post.time} • <span class="material-symbols-outlined" style="font-size:12px;">public</span></span>
+                                    </div>
+                                </div>
+                                <div class="fb-post-content">${post.content}</div>
+                                <div class="fb-post-interactions">
+                                    <div class="fb-reactions">
+                                        <div class="fb-reaction-icon fb-reaction-like"><span class="material-symbols-outlined" style="font-size:10px;">thumb_up</span></div>
+                                        <div class="fb-reaction-icon fb-reaction-heart" style="margin-left:-5px;"><span class="material-symbols-outlined" style="font-size:10px;">favorite</span></div>
+                                        <span style="margin-left:5px;">${post.likes}</span>
+                                    </div>
+                                    <div>${post.comments} comentarios</div>
+                                </div>
+                            </div>
+                            `;
+                        });
+
+                        // Duplicar para el scroll infinito y fluido (CSS animation)
+                        track.innerHTML = html + html;
+                    }
+                });
+            </script>
+        </section>
+    </main>
+
+    <script src="components/header.js"></script>
+    <script src="components/footer.js"></script>
+    <site-footer></site-footer>
+</body>
+
+</html>
